@@ -19,8 +19,8 @@ namespace MyStoreWinApp
             {
                 var member = new Member()
                 {
-                    Email = txtEmail.Text,
-                    Password = txtPassword.Text
+                    Email = lbEmail.Text,
+                    Password = lbPassword.Text
                 };
                 MemberRepository.Login(member);
 
@@ -39,19 +39,9 @@ namespace MyStoreWinApp
             Close();
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
+        private void txtEmail_Click(object sender, EventArgs e)
         {
-            try { 
-            txtEmail.Text = member.Email.ToString();
-            txtPassword.Text = member.Password.ToString();
-            }catch(Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
 
-          
         }
-
-        
     }
 }

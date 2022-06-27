@@ -17,10 +17,7 @@ namespace MyStoreWinApp
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void btnCancel_Click(object sender, EventArgs e) => Close();
 
         private void txtWelcomeUser_Click(object sender, EventArgs e)
         {

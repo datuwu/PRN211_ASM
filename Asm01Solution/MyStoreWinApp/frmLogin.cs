@@ -1,3 +1,6 @@
+using BusinessObject;
+using DataAccess.Repository;
+
 namespace MyStoreWinApp
 {
     public partial class frmLogin : Form
@@ -7,29 +10,30 @@ namespace MyStoreWinApp
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public IMemberRepository MemberRepository { get; set; }
+        public Member member { get; set; }
+
+        private void btnLogin_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var member = new Member()
+                {
+                    Email = txtEmail.Text,
+                    Password = txtPassword.Text
+                };
+                if (member != null) MemberRepository.Login(member);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, " Login fail");
+            }
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
 
-        }
+        private void btnCancel_Click(object sender, EventArgs e) => Close();
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

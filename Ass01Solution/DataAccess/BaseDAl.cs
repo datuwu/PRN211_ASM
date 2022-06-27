@@ -20,9 +20,9 @@ namespace DataAccess
             string connectionString;
             IConfiguration config =new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.jason",true,true)
+                .AddJsonFile("appsettings.json",true,true)
                 .Build();
-            connectionString = config["ConnectionString:MANH"];
+            connectionString = config["ConnectionString:MyServer"];
             return connectionString;
         }
         public void CloseConnection()=>dataProvider.CloseConnection(connection);
