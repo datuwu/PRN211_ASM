@@ -28,51 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtEmail = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.lbPassword = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // lbEmail
+            // 
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.Location = new System.Drawing.Point(89, 51);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(36, 15);
+            this.lbEmail.TabIndex = 0;
+            this.lbEmail.Text = "Email";
+            this.lbEmail.Click += new System.EventHandler(this.txtEmail_Click);
+            // 
+            // lbPassword
+            // 
+            this.lbPassword.AutoSize = true;
+            this.lbPassword.Location = new System.Drawing.Point(89, 95);
+            this.lbPassword.Name = "lbPassword";
+            this.lbPassword.Size = new System.Drawing.Size(57, 15);
+            this.lbPassword.TabIndex = 1;
+            this.lbPassword.Text = "Password";
+            // 
             // txtEmail
             // 
-            this.txtEmail.AutoSize = true;
-            this.txtEmail.Location = new System.Drawing.Point(102, 68);
+            this.txtEmail.Location = new System.Drawing.Point(178, 51);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(46, 20);
-            this.txtEmail.TabIndex = 0;
-            this.txtEmail.Text = "Email";
+            this.txtEmail.Size = new System.Drawing.Size(159, 23);
+            this.txtEmail.TabIndex = 2;
             // 
             // txtPassword
             // 
-            this.txtPassword.AutoSize = true;
-            this.txtPassword.Location = new System.Drawing.Point(102, 127);
+            this.txtPassword.Location = new System.Drawing.Point(178, 90);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(70, 20);
-            this.txtPassword.TabIndex = 1;
-            this.txtPassword.Text = "Password";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(204, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 27);
-            this.textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(204, 120);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(181, 27);
-            this.textBox2.TabIndex = 3;
+            this.txtPassword.Size = new System.Drawing.Size(159, 23);
+            this.txtPassword.TabIndex = 3;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(102, 200);
+            this.btnLogin.Location = new System.Drawing.Point(89, 150);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(94, 29);
+            this.btnLogin.Size = new System.Drawing.Size(82, 22);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -80,9 +84,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(274, 200);
+            this.btnCancel.Location = new System.Drawing.Point(240, 150);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(94, 29);
+            this.btnCancel.Size = new System.Drawing.Size(82, 22);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -90,18 +95,18 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 450);
+            this.ClientSize = new System.Drawing.Size(472, 338);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lbPassword);
+            this.Controls.Add(this.lbEmail);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLogin";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,10 +114,10 @@
 
         #endregion
 
-        private Label txtEmail;
-        private Label txtPassword;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Label lbEmail;
+        private Label lbPassword;
+        private TextBox txtEmail;
+        private TextBox txtPassword;
         private Button btnLogin;
         private Button btnCancel;
     }

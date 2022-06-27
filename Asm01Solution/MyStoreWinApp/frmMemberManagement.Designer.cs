@@ -104,7 +104,6 @@
             this.lbTitle.Size = new System.Drawing.Size(231, 30);
             this.lbTitle.TabIndex = 8;
             this.lbTitle.Text = "Member Management";
-            this.lbTitle.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtWelcomeUser
             // 

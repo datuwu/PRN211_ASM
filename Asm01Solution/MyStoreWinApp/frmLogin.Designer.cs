@@ -45,7 +45,6 @@
             this.lbEmail.Size = new System.Drawing.Size(36, 15);
             this.lbEmail.TabIndex = 0;
             this.lbEmail.Text = "Email";
-            this.lbEmail.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbPassword
             // 
@@ -55,7 +54,6 @@
             this.lbPassword.Size = new System.Drawing.Size(57, 15);
             this.lbPassword.TabIndex = 3;
             this.lbPassword.Text = "Password";
-            this.lbPassword.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // txtEmail
             // 
@@ -76,7 +74,7 @@
             // 
             this.lbLogin.AutoSize = true;
             this.lbLogin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbLogin.Location = new System.Drawing.Point(40, 8);
+            this.lbLogin.Location = new System.Drawing.Point(21, 12);
             this.lbLogin.Name = "lbLogin";
             this.lbLogin.Size = new System.Drawing.Size(231, 30);
             this.lbLogin.TabIndex = 6;
@@ -90,18 +88,17 @@
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(184, 120);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(72, 23);
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmLogin
             // 
@@ -118,7 +115,6 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
