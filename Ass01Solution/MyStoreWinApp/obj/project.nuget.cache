@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Cjz6q7eAU/kJ7Ag+CF0HsB4nAj5HApzwcxFmbWRt004f5TNQZNVRXj/IBKJ/hiE2oQBIlfY4tYmX2RDHlNUdHA==",
+  "dgSpecHash": "h4yJtWdcI+7s8e1GU0PxiPGQ3dElLl4UCruuadPWj7rw+SFc0OkTELTiBRZoZJNi80+lzLpfhWtqjgKniSk5tA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Desktop\\FPT SUMMER 2022\\PRN322\\ASM1\\PRN211_ASM\\Ass01Solution\\MyStoreWinApp\\MyStoreWinApp.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",

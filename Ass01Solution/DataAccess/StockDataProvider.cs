@@ -110,6 +110,28 @@ namespace DataAccess
                 throw new Exception(ex.Message);
             }
         }
+        public void SortDesc(string commandText, CommandType commandType, params SqlParameter[] parameters)
+        {
+            try
+            {
+                using var connection = new SqlConnection(ConnectionString);
+                connection.Open();
+                using var command = new SqlCommand(commandText, connection);
+                command.CommandType = commandType;
+                if (parameters != null)
+                {
+                    foreach (var param in parameters)
+                    {
+                        command.Parameters.Add(parameters);
+                    }
+                }
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Data provider:Sort Method", ex.InnerException);
+            }
+        }
 
     }
 }
