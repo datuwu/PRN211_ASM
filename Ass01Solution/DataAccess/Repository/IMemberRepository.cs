@@ -1,5 +1,6 @@
 ﻿using BusinessObject;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace DataAccess.Repository
 {
@@ -8,10 +9,12 @@ namespace DataAccess.Repository
         IEnumerable<Member> GetMembers();
         Member GetMemberByID(int id);
         void DeleteMember(int id);
-        bool Login(Member member);
+        IEnumerable<Member> GetMembers1();
         void InsertMember(Member member);
         void UpdateMember(Member member);
         IEnumerable<Member> SortDesc();
         Member GetMemberByIDandName(int id, string name);
+        void GetMemberByCityAndCountry(string city,string country);
     }
 }
+

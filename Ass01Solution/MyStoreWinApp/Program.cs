@@ -11,7 +11,19 @@ namespace MyStoreWinApp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmLogin());
+            frmLogin loginForm = new frmLogin();
+            Application.Run(loginForm);
+            if (loginForm.UserSuccessfullyAuthenticated)
+            {
+                if (loginForm.isAdmin == true)
+                {
+                    Application.Run(new frmMemberManagement() { isAdmin = true });
+                }
+                else
+                {
+                    Application.Run(new frmMemberManagement() { isAdmin = false, id = loginForm.id });
+                }
+            }
         }
     }
 }

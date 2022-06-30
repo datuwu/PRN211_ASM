@@ -1,6 +1,5 @@
 ﻿using System.Data;
 using BusinessObject;
-using Newtonsoft.Json;
 using Microsoft.Data.SqlClient;
 
 namespace DataAccess
@@ -10,6 +9,14 @@ namespace DataAccess
         private static MemberDAO instance = null;
         private static readonly object instanceLock = new object();
         private MemberDAO() { }
+        private static List<Member> MemberList = new List<Member>()
+        {
+            new Member{MemberID=1, MemberName="Manh", Email="manh@gmail.com",City="HCM", Country="VietNam", Password="123" },
+            new Member{MemberID=2, MemberName="Minh", Email="minh@gmail.com",City="HCM", Country="VietNam", Password="123" },
+            new Member{MemberID=3, MemberName="Huy", Email="huy@gmail.com",City="HCM", Country="VietNam", Password="123" },
+
+
+        };
         public static MemberDAO Instance
         {
             get
@@ -24,6 +31,7 @@ namespace DataAccess
                 }
             }
         }
+        public List<Member> GetMemberList1() => MemberList;
         public IEnumerable<Member> GetMemberList()
         {
             IDataReader dataReader = null;
@@ -63,24 +71,22 @@ namespace DataAccess
         {
             Member member = null;
             IDataReader dataReader = null;
-            string SQLSelect = "Select MemberID,MemberName,Email,Password,City,Country" + "From FStore where MemberID=@MemberID";
+            string SQLSelect = "Select MemberID,MemberName,Email,Password,City,Country " + " from FStore where MemberID=@MemberID ";
             try
             {
                 var param = dataProvider.CreateParameter("@MemberID", 4, MemberID, DbType.Int32);
-                dataReader = dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection);
+                dataReader = dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection,param);
+                if (dataReader.Read())
                 {
-                    while (dataReader.Read())
+                    member = new Member
                     {
-                        member = new Member
-                        {
-                            MemberID = dataReader.GetInt32(0),
-                            MemberName = dataReader.GetString(1),
-                            Email = dataReader.GetString(2),
-                            Password = dataReader.GetString(3),
-                            City = dataReader.GetString(4),
-                            Country = dataReader.GetString(5)
-                        };
-                    }
+                        MemberID = dataReader.GetInt32(0),
+                        MemberName = dataReader.GetString(1),
+                        Email = dataReader.GetString(2),
+                        Password = dataReader.GetString(3),
+                        City = dataReader.GetString(4),
+                        Country = dataReader.GetString(5),
+                    };
                 }
             }
             catch (Exception ex)
@@ -92,10 +98,9 @@ namespace DataAccess
                 dataReader.Close();
                 CloseConnection();
             }
-
             return member;
         }
-        public Member GetMemberByIDandName(int MemberID,string MemberName)
+        public Member GetMemberByIDandName(int MemberID, string MemberName)
         {
             Member member = null;
             IDataReader dataReader = null;
@@ -206,7 +211,7 @@ namespace DataAccess
                 if (member != null)
                 {
                     string SQLDelete = "Delete FStore where MemberID=@MemberID";
-                    var parameters = dataProvider.CreateParameter("@MemberID", 4, member.MemberID, DbType.Int32);
+                    var parameters = dataProvider.CreateParameter("@MemberID", 4, MemberID, DbType.Int32);
                     dataProvider.Delete(SQLDelete, CommandType.Text, parameters);
                 }
                 else
@@ -223,7 +228,7 @@ namespace DataAccess
                 CloseConnection();
             }
         }
-         public IEnumerable<Member> MemberListDesc()
+        public IEnumerable<Member> MemberListDesc()
         {
             IDataReader dataReader = null;
             string SQLSortDesc = "Select MemberID,MemberName,Email,Password,City,Country From FStore ORDER BY MemberName DESC";
@@ -258,44 +263,41 @@ namespace DataAccess
             }
             return members;
         }
-        public static Member readJSON()
+        public void GetMemberByCityAndCountry(string city,string country)
         {
-            /*
-             được áp dụng cho một trường, phương thức hoặc thuộc tính của lớp 
-            thì chúng không thể được truy cập từ đối tượng thể hiện của lớp, 
-             */
-            Member member = new Member();
-            using (StreamReader sr = File.OpenText(@"C:\Users\Admin\OneDrive\Desktop\FPT SUMMER 2022\PRN322\ASM1\PRN211_ASM\Ass01Solution\DataAccess\appsettings.json"))
-            {
-                var obj = sr.ReadToEnd();
-                member = JsonConvert.DeserializeObject<Member>(obj);
-            }
-            return member;
-        }
+       
+            Member member= null;
 
-        public bool Login(Member member)
-        {
+            IDataReader dataReader = null;
+            string SQLSelect = "Select MemberID, MemberName, Email, Password, City, Country " + "from Fstore where City=@City And Country=@Country";
             try
             {
-                Member member_read = readJSON();
-                if (member_read.Email == member.Email && member_read.Password == member.Password && member_read.Password.Equals(member.Password) && member_read.Email.Equals(member.Email))
+                var parameters =new List<SqlParameter>();
+                parameters.Add(dataProvider.CreateParameter("@City", 50, city,DbType.String));
+                parameters.Add(dataProvider.CreateParameter("@Country",50,country,DbType.String));
+                dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection ,parameters.ToArray());
+                while(dataReader.Read())
                 {
-                    return true;
+                    member = new Member
+                    {
+                        MemberID = dataReader.GetInt32(0),
+                        MemberName = dataReader.GetString(1),
+                        Email = dataReader.GetString(2),
+                        Password = dataReader.GetString(3),
+                        City = dataReader.GetString(4),
+                        Country = dataReader.GetString(5),
+                    };
                 }
-
-                else if (member.Email == null && member.Password == null && member.Email == "" && member.Password == "")
-                {
-                    return false;
-                    throw new Exception("Login fail");
-                }
-            }
-
-
-            catch (Exception ex)
+            }catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-            return false;
+            finally
+            {
+                
+                CloseConnection();
+            }
+     
         }
     }
 }
