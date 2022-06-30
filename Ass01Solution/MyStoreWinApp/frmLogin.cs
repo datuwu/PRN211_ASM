@@ -34,14 +34,14 @@ namespace MyStoreWinApp
                 // convert json string to dynamic type
                 var obj = jss.Deserialize<dynamic>(json);
                 // get contents
-               /* var admin = new Member
+                var admin = new Member
                 {
                     Email = obj["Member"]["Email"],
                     Password = obj["Member"]["Password"]
                 };
-               */
+               
                 // add employees to richtextbox
-                var members = memberRepository.GetMembers1();
+                var members = memberRepository.GetMembers();
                 bool isMem = false;
                 foreach (var i in members)
                 {
@@ -57,7 +57,7 @@ namespace MyStoreWinApp
                         id = i.MemberID;
                         isMem = true;
                     }
-                   /* else if (admin.Email.Equals(txtEmail.Text) && admin.Password.Equals(txtPassword.Text))
+                    else if (admin.Email.Equals(txtEmail.Text) && admin.Password.Equals(txtPassword.Text))
                     {
                         frmMemberManagement frm = new frmMemberManagement()
                         {
@@ -67,7 +67,7 @@ namespace MyStoreWinApp
                         UserSuccessfullyAuthenticated = true;
                         isAdmin = true;
                         isMem = true;
-                    }*/
+                    }
                 }
                 if (isMem == true)
                 {

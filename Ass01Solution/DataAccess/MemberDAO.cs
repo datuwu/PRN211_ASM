@@ -75,7 +75,7 @@ namespace DataAccess
             try
             {
                 var param = dataProvider.CreateParameter("@MemberID", 4, MemberID, DbType.Int32);
-                dataReader = dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection,param);
+                dataReader = dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, param);
                 if (dataReader.Read())
                 {
                     member = new Member
@@ -175,7 +175,7 @@ namespace DataAccess
             try
             {
                 Member c = GetMemberByID(member.MemberID);
-                if (c == null)
+                if (c != null)
                 {
                     string SQLUpdate = "Update FStore set MemberName=@MemberName,Email=@Email,Password=@Password,City=@City,Country=@Country where MemberID=@MemberID";
                     var parameters = new List<SqlParameter>();
@@ -189,7 +189,7 @@ namespace DataAccess
                 }
                 else
                 {
-                    throw new Exception("The car does not already exist.");
+                    throw new Exception("The member does not already exist.");
                 }
             }
             catch (Exception ex)
@@ -263,20 +263,20 @@ namespace DataAccess
             }
             return members;
         }
-        public void GetMemberByCityAndCountry(string city,string country)
+        public Member GetMemberByCityAndCountry(string city, string country)
         {
-       
-            Member member= null;
+
+            Member member = null;
 
             IDataReader dataReader = null;
             string SQLSelect = "Select MemberID, MemberName, Email, Password, City, Country " + "from Fstore where City=@City And Country=@Country";
             try
             {
-                var parameters =new List<SqlParameter>();
-                parameters.Add(dataProvider.CreateParameter("@City", 50, city,DbType.String));
-                parameters.Add(dataProvider.CreateParameter("@Country",50,country,DbType.String));
-                dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection ,parameters.ToArray());
-                while(dataReader.Read())
+                var parameters = new List<SqlParameter>();
+                parameters.Add(dataProvider.CreateParameter("@City", 50, city, DbType.String));
+                parameters.Add(dataProvider.CreateParameter("@Country", 50, country, DbType.String));
+                dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, parameters.ToArray());
+                while (dataReader.Read())
                 {
                     member = new Member
                     {
@@ -288,16 +288,54 @@ namespace DataAccess
                         Country = dataReader.GetString(5),
                     };
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
             finally
             {
-                
+                dataReader.Close();
                 CloseConnection();
             }
-     
+            return member;
+
+        }
+        public IEnumerable<Member> FindCityAndCountry(string city, string country)
+        {
+            Member member = null;
+            IDataReader dataReader = null;
+            string SQLSelect = "Select MemberID,MemberName,Email,Password,City,Country From FStore" + "City=@City And Country=@Country";
+            var members = new List<Member>();
+            try
+            {
+                var parameters = new List<SqlParameter>();
+                parameters.Add(dataProvider.CreateParameter("@City", 50, city, DbType.String));
+                parameters.Add(dataProvider.CreateParameter("@Country", 50, country, DbType.String));
+                dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, parameters.ToArray());
+                while (dataReader.Read())
+                {
+                    member = new Member
+                    {
+                        MemberID = dataReader.GetInt32(0),
+                        MemberName = dataReader.GetString(1),
+                        Email = dataReader.GetString(2),
+                        Password = dataReader.GetString(3),
+                        City = dataReader.GetString(4),
+                        Country = dataReader.GetString(5),
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                dataReader.Close();
+                CloseConnection();
+            }
+            return members;
         }
     }
 }

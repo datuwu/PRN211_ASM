@@ -18,6 +18,8 @@ namespace MyStoreWinApp
         private void frmMemberDetails_Load(object sender, EventArgs e)
         {
             cboCity.SelectedIndex = 0;
+            cboCountry.SelectedIndex = 0;
+
             txtMemberID.Enabled = !InsertOrUpdate;
             //Update mode
             if (InsertOrUpdate == true)

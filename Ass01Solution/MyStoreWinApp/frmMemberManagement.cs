@@ -77,7 +77,7 @@ namespace MyStoreWinApp
 
         private void frmMemberManagement_Load(object sender, EventArgs e)
         {
-            /* if (isAdmin == false)
+             if (isAdmin == false)
              {
                  btnDelete.Enabled = false;
                  btnNew.Enabled = false;
@@ -93,12 +93,13 @@ namespace MyStoreWinApp
                  cboSearchCity.Enabled = false;
                  cboSearchCountry.Enabled = false;
                  dgvMemberList.CellDoubleClick += DgvMemberList_CellDoubleClick;
-             }*/
+            }
+            else{
 
 
-            btnDelete.Enabled = false;
-            //Register this event to open the frmMemberDetail form that performs updating
-            dgvMemberList.CellDoubleClick += DgvMemberList_CellDoubleClick;
+                btnDelete.Enabled = true;
+                //Register this event to open the frmMemberDetail form that performs updating
+                dgvMemberList.CellDoubleClick += DgvMemberList_CellDoubleClick; }
 
 
         }
@@ -216,7 +217,7 @@ namespace MyStoreWinApp
         private void LoadOneMember()
         {
             Member member = new Member();
-            var members = memberRepository.GetMembers1();
+            var members = memberRepository.GetMembers();
             try
             {
                 foreach (var i in members)
@@ -286,8 +287,7 @@ namespace MyStoreWinApp
         }
         private void FilterMember()
         {
-
-             memberRepository.GetMemberByCityAndCountry(cboCity.Text,cboCountry.Text);
+           
             try
             {
                 source = new BindingSource();
