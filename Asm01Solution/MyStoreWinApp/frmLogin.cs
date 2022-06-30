@@ -17,12 +17,11 @@ namespace MyStoreWinApp
         {
             try
             {
-                var member = new Member()
-                {
-                    Email = txtEmail.Text,
-                    Password = txtPassword.Text
-                };
-                if (member != null) MemberRepository.Login(member);
+                MemberRepository.G
+                string email = txtEmail.Text;
+                string password = txtPassword.Text;
+                if (email != null && password != null) MemberRepository.Login(email, password); 
+                else throw new Exception("null info");
             }
             catch (Exception ex)
             {

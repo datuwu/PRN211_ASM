@@ -14,7 +14,7 @@ namespace DataAccess.Repository
         public void InsertMember(Member member) => MemberDAO.Instance.AddNew(member);
 
         public IEnumerable<Member> SortDesc()=>MemberDAO.Instance.MemberListDesc();
-        public bool Login(Member member) => MemberDAO.Instance.Login(member);
+        public Member Login(string email, string password) => MemberDAO.Instance.Login(email, password);
         public void UpdateMember(Member member) => MemberDAO.Instance.Update(member);
         public Member GetMemberByIDAndName(int MemberID, string MemberName) => MemberDAO.Instance.GetMemberByIDAndName(MemberID, MemberName);
     }

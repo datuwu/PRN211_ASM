@@ -266,7 +266,7 @@ namespace DataAccess
             thì chúng không thể được truy cập từ đối tượng thể hiện của lớp, 
              */
             Member member = new Member();
-            using (StreamReader sr = File.OpenText(@"C:\Users\Admin\OneDrive\Desktop\FPT SUMMER 2022\PRN322\ASM1\PRN211_ASM\Ass01Solution\DataAccess\appsettings.json"))
+            using (StreamReader sr = File.OpenText(@".\Repository\appsettings.json"))
             {
                 var obj = sr.ReadToEnd();
                 member = JsonConvert.DeserializeObject<Member>(obj);
@@ -274,20 +274,20 @@ namespace DataAccess
             return member;
         }
 
-        public bool Login(Member member)
+        public Member Login(string email, string password)
         {
             try
             {
                 Member member_read = readJSON();
                 if (
-                    member_read.Password.Equals(member.Password) && 
-                    member_read.Email.Equals(member.Email)
+                    member_read.Password.Equals(password) && 
+                    member_read.Email.Equals(email)
                     )
                 {
                     return true;
                 }
 
-                else if (member.Email == null && member.Password == null && member.Email == "" && member.Password == "")
+                else if (email == null || password == null || email == "" || password == "")
                 {
                     return false;
                     throw new Exception("Login fail");

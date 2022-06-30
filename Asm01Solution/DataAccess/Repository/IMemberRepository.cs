@@ -8,7 +8,7 @@ namespace DataAccess.Repository
         IEnumerable<Member> GetMembers();
         Member GetMemberByID(int id);
         void DeleteMember(int id);
-        bool Login(Member member);
+        Member Login(string email, string password);
         void InsertMember(Member member);
         void UpdateMember(Member member);
         IEnumerable<Member> SortDesc();
