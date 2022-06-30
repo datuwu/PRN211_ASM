@@ -18,6 +18,6 @@ namespace DataAccess.Repository
         public IEnumerable<Member> SortDesc() => MemberDAO.Instance.MemberListDesc();
         public void UpdateMember(Member member) => MemberDAO.Instance.Update(member);
         public Member GetMemberByIDandName(int MemberID, string MemberName) => MemberDAO.Instance.GetMemberByIDandName(MemberID, MemberName);
-       public IEnumerable<Member> GetCityAndCountry(string city,string country)=>MemberDAO.Instance.FindCityAndCountry(city,country);
+        public IEnumerable<Member> GetCityAndCountry(string city, string country) => MemberDAO.Instance.GetMemberByCityAndCountry(city, country);
     }
 }
