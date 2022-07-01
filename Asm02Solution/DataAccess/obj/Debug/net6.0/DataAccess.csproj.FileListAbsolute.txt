@@ -10,3 +10,8 @@ D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\DataAc
 D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
 D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\DataAccess\bin\Debug\net6.0\DataAccess.runtimeconfig.json
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\DataAccess\bin\Debug\net6.0\BusinessObject.dll
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
