@@ -209,7 +209,7 @@ public class OrderDetailDAO
         }
     }
     //Remove OrderDetail
-    public void Remove(int productId, int orderId)
+    public void Remove(int orderId, int productId)
     {
         try
         {
