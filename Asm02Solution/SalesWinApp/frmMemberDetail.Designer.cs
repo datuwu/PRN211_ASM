@@ -200,6 +200,8 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtMemberName;
         private System.Windows.Forms.TextBox txtMemberID;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.TextBox txtCountry;
         private System.Windows.Forms.ComboBox cboCity;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
