@@ -1,0 +1,17 @@
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\bin\Debug\net6.0-windows\SalesWinApp.exe
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\bin\Debug\net6.0-windows\SalesWinApp.deps.json
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\bin\Debug\net6.0-windows\SalesWinApp.runtimeconfig.json
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\bin\Debug\net6.0-windows\SalesWinApp.dll
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\bin\Debug\net6.0-windows\SalesWinApp.pdb
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.csproj.AssemblyReference.cache
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmLogin.resources
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.csproj.GenerateResource.cache
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.AssemblyInfoInputs.cache
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.AssemblyInfo.cs
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.csproj.CoreCompileInputs.cache
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.dll
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\obj\Debug\net6.0-windows\refint\SalesWinApp.dll
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.pdb
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.genruntimeconfig.cache
+D:\FPT\STUDYING\Ky5_SUMMER2022\PRN211\Assignment\PRN211_ASM\Asm02Solution\SalesWinApp\obj\Debug\net6.0-windows\ref\SalesWinApp.dll
