@@ -176,6 +176,9 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
+              "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\BusinessObject\\BusinessObject.csproj"
+              },
               "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\DataAccess\\DataAccess.csproj": {
                 "projectPath": "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\DataAccess\\DataAccess.csproj"
               }
