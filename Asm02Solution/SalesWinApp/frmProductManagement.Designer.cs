@@ -45,14 +45,14 @@
             this.txtWeight = new System.Windows.Forms.TextBox();
             this.txtUnitPrice = new System.Windows.Forms.TextBox();
             this.txtUnitsInStock = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboSearchBy = new System.Windows.Forms.ComboBox();
             this.lbSearchBy = new System.Windows.Forms.Label();
             this.lbInput = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtInput = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.msProductManagement.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,7 @@
             this.dgvProduct.RowTemplate.Height = 25;
             this.dgvProduct.Size = new System.Drawing.Size(776, 182);
             this.dgvProduct.TabIndex = 0;
+            this.dgvProduct.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellDoubleClick);
             // 
             // lbProductId
             // 
@@ -199,18 +200,18 @@
             this.txtUnitsInStock.Size = new System.Drawing.Size(259, 23);
             this.txtUnitsInStock.TabIndex = 5;
             // 
-            // comboBox1
+            // cboSearchBy
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboSearchBy.FormattingEnabled = true;
+            this.cboSearchBy.Items.AddRange(new object[] {
             "Product ID",
             "Product Name",
             "Unit Price",
             "UnitInStock"});
-            this.comboBox1.Location = new System.Drawing.Point(133, 183);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 23);
-            this.comboBox1.TabIndex = 6;
+            this.cboSearchBy.Location = new System.Drawing.Point(133, 183);
+            this.cboSearchBy.Name = "cboSearchBy";
+            this.cboSearchBy.Size = new System.Drawing.Size(92, 23);
+            this.cboSearchBy.TabIndex = 6;
             // 
             // lbSearchBy
             // 
@@ -232,12 +233,12 @@
             this.lbInput.TabIndex = 1;
             this.lbInput.Text = "Input :";
             // 
-            // textBox1
+            // txtInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(133, 218);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 23);
-            this.textBox1.TabIndex = 5;
+            this.txtInput.Location = new System.Drawing.Point(133, 218);
+            this.txtInput.Name = "txtInput";
+            this.txtInput.Size = new System.Drawing.Size(121, 23);
+            this.txtInput.TabIndex = 5;
             // 
             // btnSearch
             // 
@@ -251,23 +252,13 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(415, 221);
+            this.btnDelete.Location = new System.Drawing.Point(414, 184);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(78, 23);
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(415, 184);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(78, 23);
-            this.btnUpdate.TabIndex = 7;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -279,18 +270,28 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(414, 221);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(78, 23);
+            this.btnClose.TabIndex = 7;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmProductManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboSearchBy);
             this.Controls.Add(this.txtUnitsInStock);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtInput);
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.txtUnitPrice);
             this.Controls.Add(this.txtCategoryId);
@@ -336,13 +337,13 @@
         private TextBox txtWeight;
         private TextBox txtUnitPrice;
         private TextBox txtUnitsInStock;
-        private ComboBox comboBox1;
+        private ComboBox cboSearchBy;
         private Label lbSearchBy;
         private Label lbInput;
-        private TextBox textBox1;
+        private TextBox txtInput;
         private Button btnSearch;
         private Button btnDelete;
-        private Button btnUpdate;
         private Button btnAdd;
+        private Button btnClose;
     }
 }

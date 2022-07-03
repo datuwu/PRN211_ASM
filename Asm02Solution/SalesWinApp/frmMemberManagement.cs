@@ -54,6 +54,7 @@ namespace SalesWinApp
                 dgvMemberList.CellDoubleClick += DgvMemberList_CellDoubleClick;
             }
 
+
             private void DgvMemberList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
             {
                 frmMemberDetail frmMemberDetails = new frmMemberDetail
