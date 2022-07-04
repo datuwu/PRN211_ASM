@@ -1,3 +1,5 @@
+using BusinessObject;
+
 namespace MyStoreWinApp
 {
     internal static class Program
@@ -17,11 +19,28 @@ namespace MyStoreWinApp
             {
                 if (loginForm.isAdmin == true)
                 {
-                    Application.Run(new frmMemberManagement() { isAdmin = true });
+                    Application.Run(new frmMemberManagement()
+                    {
+                        isAdmin = true,
+                        loginMember = new Member
+                        {
+                            Email = loginForm.loginMember.Email,
+                            Password = loginForm.loginMember.Password,
+                        }
+                    });
                 }
                 else
                 {
-                    Application.Run(new frmMemberManagement() { isAdmin = false, id = loginForm.id });
+                    Application.Run(new frmMemberManagement()
+                    {
+                        isAdmin = false,
+                        id = loginForm.id,
+                        loginMember = new Member
+                        {
+                            Email = loginForm.loginMember.Email,
+                            Password = loginForm.loginMember.Password,
+                        }
+                    });
                 }
             }
         }

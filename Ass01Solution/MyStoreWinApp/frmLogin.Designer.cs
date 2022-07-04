@@ -66,8 +66,10 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(233, 151);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '1';
             this.txtPassword.Size = new System.Drawing.Size(181, 27);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLog
             // 

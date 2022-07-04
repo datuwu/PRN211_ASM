@@ -4,7 +4,7 @@ using Microsoft.Data.SqlClient;
 
 namespace DataAccess
 {
-    public class MemberDAO : BaseDAl
+    public class MemberDAO : BaseDAL
     {
         private static MemberDAO instance = null;
         private static readonly object instanceLock = new object();
@@ -35,7 +35,7 @@ namespace DataAccess
         public IEnumerable<Member> GetMemberList()
         {
             IDataReader dataReader = null;
-            string SQLSelect = "Select MemberID,MemberName,Email,Password,City,Country From FStore";
+            string SQLSelect = "Select MemberID,MemberName,Email,Password,City,Country From Members";
             var members = new List<Member>();
             try
             {
@@ -71,7 +71,7 @@ namespace DataAccess
         {
             Member member = null;
             IDataReader dataReader = null;
-            string SQLSelect = "Select MemberID,MemberName,Email,Password,City,Country " + " from FStore where MemberID=@MemberID ";
+            string SQLSelect = "Select MemberID,MemberName,Email,Password,City,Country " + " from Members where MemberID=@MemberID ";
             try
             {
 
@@ -105,7 +105,7 @@ namespace DataAccess
         {
             Member member = null;
             IDataReader dataReader = null;
-            string SQLSelectIDandNAME = "Select MemberID,MemberName,Email,Password,City,Country" + "From FStore where MemberID=@MemberID AND MemberName=@MemberName";
+            string SQLSelectIDandNAME = "Select MemberID,MemberName,Email,Password,City,Country" + "From Members where MemberID=@MemberID AND MemberName=@MemberName";
             try
             {
                 var parameters = new List<SqlParameter>();
@@ -146,7 +146,7 @@ namespace DataAccess
                 Member pro = GetMemberByID(member.MemberID);
                 if (pro == null)
                 {
-                    string SQLInsert = "Insert FStore values(@MemberID,@MemberName,@Email,@Password,@City,@Country)";
+                    string SQLInsert = "Insert Members values(@MemberID,@MemberName,@Email,@Password,@City,@Country)";
                     var parameters = new List<SqlParameter>();
                     parameters.Add(dataProvider.CreateParameter("@MemberID", 4, member.MemberID, DbType.Int32));
                     parameters.Add(dataProvider.CreateParameter("@MemberName", 50, member.MemberName, DbType.String));
@@ -178,7 +178,7 @@ namespace DataAccess
                 Member c = GetMemberByID(member.MemberID);
                 if (c != null)
                 {
-                    string SQLUpdate = "Update FStore set MemberName=@MemberName,Email=@Email,Password=@Password,City=@City,Country=@Country where MemberID=@MemberID";
+                    string SQLUpdate = "Update Members set MemberName=@MemberName,Email=@Email,Password=@Password,City=@City,Country=@Country where MemberID=@MemberID";
                     var parameters = new List<SqlParameter>();
                     parameters.Add(dataProvider.CreateParameter("@MemberID", 4, member.MemberID, DbType.Int32));
                     parameters.Add(dataProvider.CreateParameter("@MemberName", 50, member.MemberName, DbType.String));
@@ -211,7 +211,7 @@ namespace DataAccess
                 Member member = GetMemberByID(MemberID);
                 if (member != null)
                 {
-                    string SQLDelete = "Delete FStore where MemberID=@MemberID";
+                    string SQLDelete = "Delete Members where MemberID=@MemberID";
                     var parameters = dataProvider.CreateParameter("@MemberID", 4, MemberID, DbType.Int32);
                     dataProvider.Delete(SQLDelete, CommandType.Text, parameters);
                 }
@@ -232,7 +232,7 @@ namespace DataAccess
         public IEnumerable<Member> MemberListDesc()
         {
             IDataReader dataReader = null;
-            string SQLSortDesc = "Select MemberID,MemberName,Email,Password,City,Country From FStore ORDER BY MemberName DESC";
+            string SQLSortDesc = "Select MemberID,MemberName,Email,Password,City,Country From Members ORDER BY MemberName DESC";
             var members = new List<Member>();
             try
             {
@@ -266,17 +266,29 @@ namespace DataAccess
         }
         public IEnumerable<Member> GetMemberByCityAndCountry(string city, string country)
         {
+            
 
             Member member = null;
             var members = new List<Member>();
             IDataReader dataReader = null;
-            string SQLSelect = "Select MemberID, MemberName, Email, Password, City, Country " + "from Fstore where City=@City And Country=@Country";
-            
+            string SQLSelect =
+                "DECLARE @CityVar VARCHAR(50), @CountryVar VARCHAR(50); " +
+                "SET @CityVar = '%' + @City + '%'; " +
+                "SET @CountryVar = '%' + @Country + '%'; " +
+                "Select * from Members " +
+                "WHERE ((City like @CityVar) OR  @CityVar IS NULL) " +
+                "And " +
+                "((Country like @CountryVar) OR @CountryVar IS NULL)";
+
             try
             {
+                //Prepare value before putting into connection string
+                city = (city != "All city" && city != "City") ? city : null;
+                country = (country != "All country" && country != "Country") ? country : null;
+                //Prepare statement
                 var parameters = new List<SqlParameter>();
-                parameters.Add(dataProvider.CreateParameter("@City", 50, city, DbType.String));
-                parameters.Add(dataProvider.CreateParameter("@Country", 50, country, DbType.String));
+                parameters.Add(dataProvider.CreateParameter("@City", 50, (object)city ?? DBNull.Value, DbType.String));
+                parameters.Add(dataProvider.CreateParameter("@Country", 50, (object)country ?? DBNull.Value, DbType.String));
                 dataReader=dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, parameters.ToArray());
                 while (dataReader.Read())
                 {
@@ -307,7 +319,7 @@ namespace DataAccess
         {
             Member member = null;
             IDataReader dataReader = null;
-            string SQLSelect = "Select MemberID,MemberName,Email,Password,City,Country From FStore" + "City=@City And Country=@Country";
+            string SQLSelect = "Select MemberID,MemberName,Email,Password,City,Country From Members" + "City=@City And Country=@Country";
             
             try
             {

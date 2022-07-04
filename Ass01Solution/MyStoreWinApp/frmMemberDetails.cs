@@ -10,6 +10,8 @@ namespace MyStoreWinApp
         public IMemberRepository memberRepository { get; set; }
         public bool InsertOrUpdate { get; set; }
         public Member MemberInfor { get; set; }
+        public Member loginMember { get; set; }
+        public bool isAdmin { get; set; }
         public frmMemberDetails()
         {
             InitializeComponent();
@@ -21,6 +23,15 @@ namespace MyStoreWinApp
             cboCountry.SelectedIndex = 0;
 
             txtMemberID.Enabled = !InsertOrUpdate;
+            if (!isAdmin && !loginMember.Email.Equals(MemberInfor.Email))
+            {
+                txtEmail.Enabled = false;
+                txtMemberName.Enabled = false;
+                txtPassword.Enabled = false;
+                txtMemberID.Enabled = false;
+                cboCity.Enabled = false;
+                cboCountry.Enabled = false;
+            }
             //Update mode
             if (InsertOrUpdate == true)
             {

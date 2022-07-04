@@ -13,6 +13,7 @@ namespace MyStoreWinApp
         public bool UserSuccessfullyAuthenticated { get; private set; }
         public bool isAdmin { get; private set; }
         public int id { get; private set; }
+        public Member loginMember { get; private set; }
         private MemberRepository memberRepository = new MemberRepository();
         public frmLogin()
         {
@@ -26,7 +27,7 @@ namespace MyStoreWinApp
             {
                 string json = string.Empty;
                 // read json string from file
-                using (StreamReader reader = new StreamReader(@"C:\Users\Admin\OneDrive\Desktop\FPT SUMMER 2022\PRN322\ASM1\PRN211_ASM\Ass01Solution\MyStoreWinApp\appsettings.json"))
+                using (StreamReader reader = new StreamReader(@"..\..\..\appsettings.json"))
                 {
                     json = reader.ReadToEnd();
                 }
@@ -42,33 +43,58 @@ namespace MyStoreWinApp
                
                 // add employees to richtextbox
                 var members = memberRepository.GetMembers();
+                
                 bool isMem = false;
-                foreach (var i in members)
+                if (admin.Email.Equals(txtEmail.Text) && admin.Password.Equals(txtPassword.Text))
                 {
-                    if (i.Email.Equals(txtEmail.Text) && i.Password.Equals(txtPassword.Text))
+                    frmMemberManagement frm = new frmMemberManagement()
                     {
-                        frmMemberManagement frm = new frmMemberManagement()
+                        isAdmin = false,
+                        loginMember = new Member
                         {
-                            isAdmin = false
-                        };
-                        Close();
-                        UserSuccessfullyAuthenticated = true;
-                        isAdmin = false;
-                        id = i.MemberID;
-                        isMem = true;
-                    }
-                    else if (admin.Email.Equals(txtEmail.Text) && admin.Password.Equals(txtPassword.Text))
+                            Email=admin.Email,
+                            Password=admin.Password,
+                        }
+                    };
+                    Close();
+                    UserSuccessfullyAuthenticated = true;
+                    isAdmin = true;
+                    loginMember = new Member
                     {
-                        frmMemberManagement frm = new frmMemberManagement()
+                        Email = admin.Email,
+                        Password = admin.Password,
+                    };
+                    isMem = true;
+                }
+                else
+                {
+                    foreach (var i in members)
+                    {
+                        if (i.Email.Equals(txtEmail.Text) && i.Password.Equals(txtPassword.Text))
                         {
-                            isAdmin = true
-                        };
-                        Close();
-                        UserSuccessfullyAuthenticated = true;
-                        isAdmin = true;
-                        isMem = true;
+                            frmMemberManagement frm = new frmMemberManagement()
+                            {
+                                isAdmin = false,
+                                loginMember = new Member
+                                {
+                                    Password=i.Password,
+                                    Email=i.Email,
+                                }
+                            };
+                            Close();
+                            UserSuccessfullyAuthenticated = true;
+                            isAdmin = false;
+                            loginMember = new Member
+                            {
+                                Email = i.Email,
+                                Password = i.Password,
+                            };
+                            id = i.MemberID;
+                            isMem = true;
+                        }
                     }
                 }
+                
                 if (isMem == true)
                 {
                     MessageBox.Show("Login Success", "Right user");

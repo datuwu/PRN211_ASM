@@ -7265,19 +7265,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\doixu\\.nuget\\packages\\": {},
+    "D:\\Software\\VS\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Desktop\\FPT SUMMER 2022\\PRN322\\ASM1\\PRN211_ASM\\Ass01Solution\\MyStoreWinApp\\MyStoreWinApp.csproj",
+      "projectUniqueName": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\MyStoreWinApp\\MyStoreWinApp.csproj",
       "projectName": "MyStoreWinApp",
-      "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\FPT SUMMER 2022\\PRN322\\ASM1\\PRN211_ASM\\Ass01Solution\\MyStoreWinApp\\MyStoreWinApp.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\FPT SUMMER 2022\\PRN322\\ASM1\\PRN211_ASM\\Ass01Solution\\MyStoreWinApp\\obj\\",
+      "projectPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\MyStoreWinApp\\MyStoreWinApp.csproj",
+      "packagesPath": "C:\\Users\\doixu\\.nuget\\packages\\",
+      "outputPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\MyStoreWinApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Software\\VS\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\doixu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7291,11 +7298,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Admin\\OneDrive\\Desktop\\FPT SUMMER 2022\\PRN322\\ASM1\\PRN211_ASM\\Ass01Solution\\BusinessObject\\BusinessObject.csproj": {
-              "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\FPT SUMMER 2022\\PRN322\\ASM1\\PRN211_ASM\\Ass01Solution\\BusinessObject\\BusinessObject.csproj"
+            "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\BusinessObject\\BusinessObject.csproj"
             },
-            "C:\\Users\\Admin\\OneDrive\\Desktop\\FPT SUMMER 2022\\PRN322\\ASM1\\PRN211_ASM\\Ass01Solution\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\FPT SUMMER 2022\\PRN322\\ASM1\\PRN211_ASM\\Ass01Solution\\DataAccess\\DataAccess.csproj"
+            "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\DataAccess\\DataAccess.csproj"
             }
           }
         }

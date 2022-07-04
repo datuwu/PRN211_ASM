@@ -126,11 +126,13 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(290, 27);
             this.txtPassword.TabIndex = 29;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // cboCountry
             // 
             this.cboCountry.FormattingEnabled = true;
             this.cboCountry.Items.AddRange(new object[] {
+            "All country",
             "Viet Nam",
             "America",
             "United State",
@@ -144,6 +146,7 @@
             // 
             this.cboCity.FormattingEnabled = true;
             this.cboCity.Items.AddRange(new object[] {
+            "All city",
             "Ho Chi Minh",
             "Da Nang",
             "Ha Noi",
