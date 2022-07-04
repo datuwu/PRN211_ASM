@@ -1,6 +1,5 @@
 ﻿using System.Data;
 using BusinessObject;
-using Newtonsoft.Json;
 using Microsoft.Data.SqlClient;
 
 namespace DataAccess
@@ -10,6 +9,14 @@ namespace DataAccess
         private static MemberDAO instance = null;
         private static readonly object instanceLock = new object();
         private MemberDAO() { }
+        private static List<Member> MemberList = new List<Member>()
+        {
+            new Member{MemberID=1, MemberName="Manh", Email="manh@gmail.com",City="HCM", Country="VietNam", Password="123" },
+            new Member{MemberID=2, MemberName="Minh", Email="minh@gmail.com",City="HCM", Country="VietNam", Password="123" },
+            new Member{MemberID=3, MemberName="Huy", Email="huy@gmail.com",City="HCM", Country="VietNam", Password="123" },
+
+
+        };
         public static MemberDAO Instance
         {
             get
@@ -24,10 +31,11 @@ namespace DataAccess
                 }
             }
         }
+        public List<Member> GetMemberList1() => MemberList;
         public IEnumerable<Member> GetMemberList()
         {
             IDataReader dataReader = null;
-            string SQLSelect = "Select MemberID,MemberName,Email,Password,City,Country From FStore";
+            string SQLSelect = "Select MemberID,MemberName,Email,Password,City,Country From Members";
             var members = new List<Member>();
             try
             {
@@ -64,24 +72,27 @@ namespace DataAccess
         {
             Member member = null;
             IDataReader dataReader = null;
+<<<<<<< HEAD:Asm01Solution/DataAccess/MemberDAO.cs
             string SQLSelect = "Select MemberID, MemberName, Email, Password, City, Country" + "From SolidStore where MemberID = @MemberID";
+=======
+            string SQLSelect = "Select MemberID,MemberName,Email,Password,City,Country " + " from Members where MemberID=@MemberID ";
+>>>>>>> asm1_repo:Ass01Solution/DataAccess/MemberDAO.cs
             try
             {
+
                 var param = dataProvider.CreateParameter("@MemberID", 4, MemberID, DbType.Int32);
-                dataReader = dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection);
+                dataReader = dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, param);
+                if (dataReader.Read())
                 {
-                    while (dataReader.Read())
+                    member = new Member
                     {
-                        member = new Member
-                        {
-                            MemberID = dataReader.GetInt32(0),
-                            MemberName = dataReader.GetString(1),
-                            Email = dataReader.GetString(2),
-                            Password = dataReader.GetString(3),
-                            City = dataReader.GetString(4),
-                            Country = dataReader.GetString(5)
-                        };
-                    }
+                        MemberID = dataReader.GetInt32(0),
+                        MemberName = dataReader.GetString(1),
+                        Email = dataReader.GetString(2),
+                        Password = dataReader.GetString(3),
+                        City = dataReader.GetString(4),
+                        Country = dataReader.GetString(5),
+                    };
                 }
             }
             catch (Exception ex)
@@ -93,14 +104,21 @@ namespace DataAccess
                 dataReader.Close();
                 CloseConnection();
             }
-
             return member;
         }
+<<<<<<< HEAD:Asm01Solution/DataAccess/MemberDAO.cs
         public Member GetMemberByIDAndName(int MemberID,string MemberName)
         {
             Member member = null;
             IDataReader dataReader = null;
             string SQLSelectIDandNAME = "Select MemberID,MemberName,Email,Password,City,Country" + "From SolidStore where MemberID=@MemberID AND MemberName=@MemberName";
+=======
+        public Member GetMemberByIDandName(int MemberID, string MemberName)
+        {
+            Member member = null;
+            IDataReader dataReader = null;
+            string SQLSelectIDandNAME = "Select MemberID,MemberName,Email,Password,City,Country" + "From Members where MemberID=@MemberID AND MemberName=@MemberName";
+>>>>>>> asm1_repo:Ass01Solution/DataAccess/MemberDAO.cs
             try
             {
                 var parameters = new List<SqlParameter>();
@@ -141,7 +159,7 @@ namespace DataAccess
                 Member pro = GetMemberByID(member.MemberID);
                 if (pro == null)
                 {
-                    string SQLInsert = "Insert FStore values(@MemberID,@MemberName,@Email,@Password,@City,@Country)";
+                    string SQLInsert = "Insert Members values(@MemberID,@MemberName,@Email,@Password,@City,@Country)";
                     var parameters = new List<SqlParameter>();
                     parameters.Add(dataProvider.CreateParameter("@MemberID", 4, member.MemberID, DbType.Int32));
                     parameters.Add(dataProvider.CreateParameter("@MemberName", 50, member.MemberName, DbType.String));
@@ -171,9 +189,9 @@ namespace DataAccess
             try
             {
                 Member c = GetMemberByID(member.MemberID);
-                if (c == null)
+                if (c != null)
                 {
-                    string SQLUpdate = "Update FStore set MemberName=@MemberName,Email=@Email,Password=@Password,City=@City,Country=@Country where MemberID=@MemberID";
+                    string SQLUpdate = "Update Members set MemberName=@MemberName,Email=@Email,Password=@Password,City=@City,Country=@Country where MemberID=@MemberID";
                     var parameters = new List<SqlParameter>();
                     parameters.Add(dataProvider.CreateParameter("@MemberID", 4, member.MemberID, DbType.Int32));
                     parameters.Add(dataProvider.CreateParameter("@MemberName", 50, member.MemberName, DbType.String));
@@ -185,7 +203,7 @@ namespace DataAccess
                 }
                 else
                 {
-                    throw new Exception("The car does not already exist.");
+                    throw new Exception("The member does not already exist.");
                 }
             }
             catch (Exception ex)
@@ -206,8 +224,8 @@ namespace DataAccess
                 Member member = GetMemberByID(MemberID);
                 if (member != null)
                 {
-                    string SQLDelete = "Delete FStore where MemberID=@MemberID";
-                    var parameters = dataProvider.CreateParameter("@MemberID", 4, member.MemberID, DbType.Int32);
+                    string SQLDelete = "Delete Members where MemberID=@MemberID";
+                    var parameters = dataProvider.CreateParameter("@MemberID", 4, MemberID, DbType.Int32);
                     dataProvider.Delete(SQLDelete, CommandType.Text, parameters);
                 }
                 else
@@ -224,10 +242,10 @@ namespace DataAccess
                 CloseConnection();
             }
         }
-         public IEnumerable<Member> MemberListDesc()
+        public IEnumerable<Member> MemberListDesc()
         {
             IDataReader dataReader = null;
-            string SQLSortDesc = "Select MemberID,MemberName,Email,Password,City,Country From FStore ORDER BY MemberName DESC";
+            string SQLSortDesc = "Select MemberID,MemberName,Email,Password,City,Country From Members ORDER BY MemberName DESC";
             var members = new List<Member>();
             try
             {
@@ -259,47 +277,100 @@ namespace DataAccess
             }
             return members;
         }
-        public static Member readJSON()
+        public IEnumerable<Member> GetMemberByCityAndCountry(string city, string country)
         {
-            /*
-             được áp dụng cho một trường, phương thức hoặc thuộc tính của lớp 
-            thì chúng không thể được truy cập từ đối tượng thể hiện của lớp, 
-             */
-            Member member = new Member();
-            using (StreamReader sr = File.OpenText(@"C:\Users\Admin\OneDrive\Desktop\FPT SUMMER 2022\PRN322\ASM1\PRN211_ASM\Ass01Solution\DataAccess\appsettings.json"))
-            {
-                var obj = sr.ReadToEnd();
-                member = JsonConvert.DeserializeObject<Member>(obj);
-            }
-            return member;
-        }
+            
 
-        public bool Login(Member member)
-        {
+            Member member = null;
+            var members = new List<Member>();
+            IDataReader dataReader = null;
+            string SQLSelect =
+                "DECLARE @CityVar VARCHAR(50), @CountryVar VARCHAR(50); " +
+                "SET @CityVar = '%' + @City + '%'; " +
+                "SET @CountryVar = '%' + @Country + '%'; " +
+                "Select * from Members " +
+                "WHERE ((City like @CityVar) OR  @CityVar IS NULL) " +
+                "And " +
+                "((Country like @CountryVar) OR @CountryVar IS NULL)";
+
             try
             {
+<<<<<<< HEAD:Asm01Solution/DataAccess/MemberDAO.cs
                 Member member_read = readJSON();
                 if (
                     member_read.Password.Equals(member.Password) && 
                     member_read.Email.Equals(member.Email)
                     )
+=======
+                //Prepare value before putting into connection string
+                city = (city != "All city" && city != "City") ? city : null;
+                country = (country != "All country" && country != "Country") ? country : null;
+                //Prepare statement
+                var parameters = new List<SqlParameter>();
+                parameters.Add(dataProvider.CreateParameter("@City", 50, (object)city ?? DBNull.Value, DbType.String));
+                parameters.Add(dataProvider.CreateParameter("@Country", 50, (object)country ?? DBNull.Value, DbType.String));
+                dataReader=dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, parameters.ToArray());
+                while (dataReader.Read())
+>>>>>>> asm1_repo:Ass01Solution/DataAccess/MemberDAO.cs
                 {
-                    return true;
-                }
-
-                else if (member.Email == null && member.Password == null && member.Email == "" && member.Password == "")
-                {
-                    return false;
-                    throw new Exception("Login fail");
+                    members.Add(new Member
+                    {
+                        MemberID = dataReader.GetInt32(0),
+                        MemberName = dataReader.GetString(1),
+                        Email = dataReader.GetString(2),
+                        Password = dataReader.GetString(3),
+                        City = dataReader.GetString(4),
+                        Country = dataReader.GetString(5),
+                    });
                 }
             }
-
-
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-            return false;
+            finally
+            {
+                dataReader.Close();
+                CloseConnection();
+            }
+            return members;
+
+        }
+        public Member FindCityAndCountry(string city, string country)
+        {
+            Member member = null;
+            IDataReader dataReader = null;
+            string SQLSelect = "Select MemberID,MemberName,Email,Password,City,Country From Members" + "City=@City And Country=@Country";
+            
+            try
+            {
+                var parameters = new List<SqlParameter>();
+                parameters.Add(dataProvider.CreateParameter("@City", 50, city, DbType.String));
+                parameters.Add(dataProvider.CreateParameter("@Country", 50, country, DbType.String));
+                dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, parameters.ToArray());
+                while (dataReader.Read())
+                {
+                    member = new Member
+                    {
+                        MemberID = dataReader.GetInt32(0),
+                        MemberName = dataReader.GetString(1),
+                        Email = dataReader.GetString(2),
+                        Password = dataReader.GetString(3),
+                        City = dataReader.GetString(4),
+                        Country = dataReader.GetString(5),
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                dataReader.Close();
+                CloseConnection();
+            }
+            return member;
         }
     }
 }

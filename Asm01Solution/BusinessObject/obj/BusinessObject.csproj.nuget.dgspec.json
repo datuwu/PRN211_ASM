@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD:Asm01Solution/BusinessObject/obj/BusinessObject.csproj.nuget.dgspec.json
     "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm01Solution\\BusinessObject\\BusinessObject.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm01Solution\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\doixu\\.nuget\\packages\\",
         "outputPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm01Solution\\BusinessObject\\obj\\",
+=======
+    "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\BusinessObject\\BusinessObject.csproj": {}
+  },
+  "projects": {
+    "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\BusinessObject\\BusinessObject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\BusinessObject\\BusinessObject.csproj",
+        "projectName": "BusinessObject",
+        "projectPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\doixu\\.nuget\\packages\\",
+        "outputPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\BusinessObject\\obj\\",
+>>>>>>> asm1_repo:Ass01Solution/BusinessObject/obj/BusinessObject.csproj.nuget.dgspec.json
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Software\\VS\\Shared\\NuGetPackages",
@@ -56,6 +70,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Nancy": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             }
           },
           "imports": [

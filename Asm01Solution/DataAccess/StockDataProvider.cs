@@ -33,9 +33,9 @@ namespace DataAccess
                 command.CommandType = commandType;
                 if(parameters != null)
                 {
-                    foreach(var param in parameters)
+                    foreach(var parameter in parameters)
                     {
-                        command.Parameters.Add(parameters);
+                        command.Parameters.Add(parameter);
                     }
                     reader = command.ExecuteReader();
                 }
@@ -55,9 +55,9 @@ namespace DataAccess
                 command.CommandType=commandType;
                 if(parameters!=null)
                 {
-                    foreach(var param in parameters)
+                    foreach(var parameter in parameters)
                     {
-                        command.Parameters.Add(parameters);
+                        command.Parameters.Add(parameter);
                     }
                 }
                 command.ExecuteNonQuery();
@@ -76,9 +76,9 @@ namespace DataAccess
                 command.CommandType = commandType;
                 if (parameters != null)
                 {
-                    foreach (var param in parameters)
+                    foreach (var parameter in parameters)
                     {
-                        command.Parameters.Add(parameters);
+                        command.Parameters.Add(parameter);
                     }
                 }
                 command.ExecuteNonQuery();
@@ -98,9 +98,9 @@ namespace DataAccess
                 command.CommandType = commandType;
                 if (parameters != null)
                 {
-                    foreach (var param in parameters)
+                    foreach (var parameter in parameters)
                     {
-                        command.Parameters.Add(parameters);
+                        command.Parameters.Add(parameter);
                     }
                 }
                 command.ExecuteNonQuery();
@@ -120,9 +120,9 @@ namespace DataAccess
                 command.CommandType = commandType;
                 if (parameters != null)
                 {
-                    foreach (var param in parameters)
+                    foreach (var parameter in parameters)
                     {
-                        command.Parameters.Add(parameters);
+                        command.Parameters.Add(parameter);
                     }
                 }
                 command.ExecuteNonQuery();

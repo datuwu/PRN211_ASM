@@ -62,6 +62,7 @@ D:\Desktop\my-material\Ki 5\PRN211\Workspace\PRN211_ASM\Ass01Solution\DataAccess
 D:\Desktop\my-material\Ki 5\PRN211\Workspace\PRN211_ASM\Ass01Solution\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
 D:\Desktop\my-material\Ki 5\PRN211\Workspace\PRN211_ASM\Ass01Solution\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 D:\Desktop\my-material\Ki 5\PRN211\Workspace\PRN211_ASM\Ass01Solution\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+<<<<<<< HEAD:Asm01Solution/DataAccess/obj/Debug/net6.0/DataAccess.csproj.FileListAbsolute.txt
 D:\Desktop\my-material\Ki 5\PRN211\Workspace\PRN211_ASM\Asm01Solution\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
 D:\Desktop\my-material\Ki 5\PRN211\Workspace\PRN211_ASM\Asm01Solution\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
 D:\Desktop\my-material\Ki 5\PRN211\Workspace\PRN211_ASM\Asm01Solution\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
@@ -78,3 +79,5 @@ D:\Desktop\my-material\Ki 5\PRN211\Workspace\PRN211_ASM\Asm01Solution\DataAccess
 D:\Desktop\my-material\Ki 5\PRN211\Workspace\PRN211_ASM\Asm01Solution\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
 D:\Desktop\my-material\Ki 5\PRN211\Workspace\PRN211_ASM\Asm01Solution\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
 D:\Desktop\my-material\Ki 5\PRN211\Workspace\PRN211_ASM\Asm01Solution\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+=======
+>>>>>>> asm1_repo:Ass01Solution/DataAccess/obj/Debug/net6.0/DataAccess.csproj.FileListAbsolute.txt

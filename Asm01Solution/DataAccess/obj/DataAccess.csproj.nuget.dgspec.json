@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD:Asm01Solution/DataAccess/obj/DataAccess.csproj.nuget.dgspec.json
     "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm01Solution\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm01Solution\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\doixu\\.nuget\\packages\\",
         "outputPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm01Solution\\BusinessObject\\obj\\",
+=======
+    "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\DataAccess\\DataAccess.csproj": {}
+  },
+  "projects": {
+    "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\BusinessObject\\BusinessObject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\BusinessObject\\BusinessObject.csproj",
+        "projectName": "BusinessObject",
+        "projectPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\doixu\\.nuget\\packages\\",
+        "outputPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\BusinessObject\\obj\\",
+>>>>>>> asm1_repo:Ass01Solution/DataAccess/obj/DataAccess.csproj.nuget.dgspec.json
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Software\\VS\\Shared\\NuGetPackages",
@@ -56,6 +70,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Nancy": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             }
           },
           "imports": [
@@ -77,6 +95,7 @@
         }
       }
     },
+<<<<<<< HEAD:Asm01Solution/DataAccess/obj/DataAccess.csproj.nuget.dgspec.json
     "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm01Solution\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -85,6 +104,16 @@
         "projectPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm01Solution\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\doixu\\.nuget\\packages\\",
         "outputPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm01Solution\\DataAccess\\obj\\",
+=======
+    "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\DataAccess\\DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\DataAccess\\DataAccess.csproj",
+        "projectName": "DataAccess",
+        "projectPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\doixu\\.nuget\\packages\\",
+        "outputPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\DataAccess\\obj\\",
+>>>>>>> asm1_repo:Ass01Solution/DataAccess/obj/DataAccess.csproj.nuget.dgspec.json
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Software\\VS\\Shared\\NuGetPackages",
@@ -106,8 +135,13 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD:Asm01Solution/DataAccess/obj/DataAccess.csproj.nuget.dgspec.json
               "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm01Solution\\BusinessObject\\BusinessObject.csproj": {
                 "projectPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm01Solution\\BusinessObject\\BusinessObject.csproj"
+=======
+              "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Ass01Solution\\BusinessObject\\BusinessObject.csproj"
+>>>>>>> asm1_repo:Ass01Solution/DataAccess/obj/DataAccess.csproj.nuget.dgspec.json
               }
             }
           }
@@ -133,6 +167,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Nancy": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
