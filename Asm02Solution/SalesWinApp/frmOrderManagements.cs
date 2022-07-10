@@ -93,12 +93,18 @@ namespace SalesWinApp
                 {
                     OrderId = int.Parse(txtOrderID.Text),
                     OrderDate = DateTime.Parse(txtOrderDate.Text),
+                    ShippedDate = (!txtShippedDate.Text.Equals("")) ? DateTime.Parse(txtShippedDate.Text) : null,
+                    RequiredDate = (!txtRequiredDate.Text.Equals("")) ? DateTime.Parse(txtRequiredDate.Text) : null,
+                    Freight = (!txtFreight.Text.Equals("")) ? decimal.Parse(txtFreight.Text) : null,
+                    MemberId = int.Parse(txtMemberID.Text),
+                    //OrderId = int.Parse(txtOrderID.Text),
+                    //OrderDate = DateTime.Parse(txtOrderDate.Text),
                     //if (txtShippedDate.Text == null)
                     //ShippedDate = "" ? DateTime.Parse(txtShippedDate.Text) : shipDate,
-                    ShippedDate = DateTime.Parse(txtShippedDate.Text),
-                    RequiredDate = DateTime.Parse(txtRequiredDate.Text),
-                    Freight = decimal.Parse(txtFreight.Text),
-                    MemberId = int.Parse(txtMemberID.Text),
+                    //ShippedDate = DateTime.Parse(txtShippedDate.Text),
+                    //RequiredDate = DateTime.Parse(txtRequiredDate.Text),
+                    //Freight = decimal.Parse(txtFreight.Text),
+                    //MemberId = int.Parse(txtMemberID.Text),
                 };
         }
             catch (Exception ex)

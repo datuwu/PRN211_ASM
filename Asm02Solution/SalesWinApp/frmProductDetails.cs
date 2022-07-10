@@ -58,7 +58,7 @@ namespace SalesWinApp
                     ProductName = txtProductName.Text,
                     Weight = txtWeight.Text,
                     UnitPrice = decimal.Parse(txtUnitPrice.Text),
-                    UnitsInStock = int.Parse(txtUnitsInStock.Text),
+                    UnitsInStock                                                              = int.Parse(txtUnitsInStock.Text),
                     CategoryId = int.Parse(txtCategoryID.Text),
 
                 };

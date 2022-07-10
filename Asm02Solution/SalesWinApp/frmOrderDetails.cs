@@ -225,11 +225,10 @@ namespace SalesWinApp
                 {
                     OrderId = int.Parse(txtOrderID.Text),
                     OrderDate = DateTime.Parse(txtOrderDate.Text),
-                    ShippedDate = DateTime.Parse(txtShippedDate.Text),
-                    RequiredDate = DateTime.Parse(txtRequiredDate.Text),
-                    Freight = decimal.Parse(txtFreight.Text),
+                    ShippedDate = (!txtShippedDate.Text.Equals("")) ? DateTime.Parse(txtShippedDate.Text) : DateTime.Now,
+                    RequiredDate = (!txtRequiredDate.Text.Equals("")) ? DateTime.Parse(txtRequiredDate.Text) : DateTime.Now,
+                    Freight = (!txtFreight.Text.Equals("")) ? decimal.Parse(txtFreight.Text) : 1,
                     MemberId = int.Parse(txtMemberID.Text),
-
                 };
                 if (InsertOrUpdate == false)
                 {
