@@ -27,6 +27,7 @@ public class MemberDAO
             }
         }
     }
+
     //Get List of Member
     public List<Member> GetMemberList()
     {
@@ -42,6 +43,7 @@ public class MemberDAO
         }
         return membersList;    
     }
+
     //----------------------------------------------------------------
     //Get Member by ID
     public Member GetMemberByID(int memberId)
@@ -50,6 +52,16 @@ public class MemberDAO
         Member member = membersList.SingleOrDefault(m => m.MemberId == memberId);
         return member;
     }
+
+    //----------------------------------------------------------------
+    //Get Member by Name
+    public Member GetMemberByCompany(string company)
+    {
+        List<Member> membersList = GetMemberList();
+        Member member = membersList.SingleOrDefault(m => m.CompanyName == company);
+        return member;
+    }
+
     //----------------------------------------------------------------
     //Add a new Member
     public void AddNewMember (Member member)
@@ -65,6 +77,7 @@ public class MemberDAO
             throw new Exception(ex.Message);
         }
     }
+
     //----------------------------------------------------------------
     //Update a new Member
     public void UpdateMember(Member member)
@@ -81,6 +94,7 @@ public class MemberDAO
             throw new Exception(ex.Message);
         }
     }
+
     //----------------------------------------------------------------
     //Remove a member
     public void RemoveMember(int memberId)
