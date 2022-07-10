@@ -4,117 +4,264 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessObject;
+using BusinessObject.Models;
 
-namespace DataAccess;
-
-public class ProductDAO
+namespace DataAccess
 {
-    //Using Singleton Pattern
-    private static ProductDAO instance = null;
-    private static readonly object instanceLock = new object();
-    private ProductDAO() { }
-    public static ProductDAO Instance
+    public class ProductDAO
     {
-        get
+        //Using Singleton Pattern
+        private static ProductDAO instance = null;
+        private static readonly object instanceLock = new object();
+        private ProductDAO() { }
+        public static ProductDAO Instance
         {
-            lock (instanceLock)
+            get
             {
-                if (instance == null)
+                lock (instanceLock)
                 {
-                    instance = new ProductDAO();
+                    if (instance == null)
+                    {
+                        instance = new ProductDAO();
+                    }
+                    return instance;
                 }
-                return instance;
             }
         }
-    }
 
-    //Get List of Member
-    public List<Product> GetProductList()
-    {
-        List<Product> Products;
-        try
+        public IEnumerable<Product> GetProductList()
         {
-            using FStoreContext fStoreContext = new FStoreContext();
-            Products = fStoreContext.Products.ToList();
+            var members = new List<Product>();
+            try
+            {
+                using var context = new FStore2Context();
+                members = context.Products.ToList();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return members;
+
         }
-        catch (Exception ex)
+
+        public Product GetProductByID(int ProductID)
         {
-            throw new Exception(ex.Message);
+            Product mem = null;
+            try
+            {
+                using var context = new FStore2Context();
+                mem = context.Products.SingleOrDefault(c => c.ProductId == ProductID);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return mem;
         }
-        return Products;
-    }
-    //Get Product by ID
-    public Product GetProductByID(int productId)
-    {
-        List<Product> products = GetProductList();
-        Product p = products.SingleOrDefault(m => m.ProductId == productId);
-        return p;
-    }
-    //Get Product by ProductName
-    public Product GetProductByName(string name)
-    {
-        List<Product> products = GetProductList();
-        Product p = products.SingleOrDefault(s => s.ProductName.Contains(name));
-        return p;
-    }
-    //Get Product by UnitPrice
-    public Product GetProductByPrice(decimal price)
-    {
-        List<Product> products = GetProductList();
-        Product p = products.SingleOrDefault(s => s.UnitPrice == price);
-        return p;
-    }
-    //Get Product by UnitsInStock
-    public Product GetProductByUnitsInStock(int stock)
-    {
-        List<Product> products = GetProductList();
-        Product p = products.SingleOrDefault(m => m.UnitsInStock == stock);
-        return p;
-    }
-    //----------------------------------------------------------------
-    //Add a new Product
-    public void AddNewProduct(Product product)
-    {
-        try
+        public List<Product> Filter(String name, string unitprice, string unitinstock, string id)
         {
-            using FStoreContext fStoreContext = new FStoreContext();
-            fStoreContext.Products.Add(product);
-            fStoreContext.SaveChanges();
+            List<Product> mem = new List<Product>();
+            try
+            {
+                using var context = new FStore2Context();
+                var members = context.Products.ToList();
+                if (!String.IsNullOrWhiteSpace(name))
+                {
+                    foreach (var x in members)
+                    {
+                        if (x.ProductName.Contains(name))
+                        {
+                            mem.Add(x);
+                        }
+                    }
+                }
+                if (!String.IsNullOrWhiteSpace(unitprice))
+                {
+                    foreach (var x in members)
+                    {
+                        if (x.UnitPrice == decimal.Parse(unitprice))
+                        {
+                            mem.Add(x);
+                        }
+                    }
+                }
+                if (!String.IsNullOrWhiteSpace(unitinstock))
+                {
+                    foreach (var x in members)
+                    {
+                        if (x.UnitsInStock == int.Parse(unitinstock))
+                        {
+                            mem.Add(x);
+                        }
+                    }
+                }
+                if (!String.IsNullOrWhiteSpace(id))
+                {
+                    mem.Add(GetProductByID(int.Parse(id)));
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return mem;
         }
-        catch (Exception ex)
+        public List<Product> GetProductByName(String name)
         {
-            throw new Exception(ex.Message);
+            List<Product> mem = new List<Product>();
+            try
+            {
+                using var context = new FStore2Context();
+                var members = context.Products.ToList();
+                foreach (var x in members)
+                {
+                    if (x.ProductName.Contains(name))
+                    {
+                        mem.Add(x);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return mem;
         }
-    }
-    //----------------------------------------------------------------
-    //Update a new Member
-    public void UpdateProduct(Product product)
-    {
-        try
+        public List<Product> GetProductByUnitPrice(decimal param)
         {
-            using FStoreContext fStoreContext = new FStoreContext();
-            fStoreContext.Products.Update(product);
-            fStoreContext.SaveChanges();
+            List<Product> mem = new List<Product>();
+            try
+            {
+                using var context = new FStore2Context();
+                var members = context.Products.ToList();
+                foreach (var x in members)
+                {
+                    if (x.UnitPrice == param)
+                    {
+                        mem.Add(x);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return mem;
         }
-        catch (Exception ex)
+        public List<Product> GetProductByUnitInStock(int param)
         {
-            throw new Exception(ex.Message);
+            List<Product> mem = new List<Product>();
+            try
+            {
+                using var context = new FStore2Context();
+                var members = context.Products.ToList();
+                foreach (var x in members)
+                {
+                    if (x.UnitsInStock == param)
+                    {
+                        mem.Add(x);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return mem;
         }
-    }
-    //----------------------------------------------------------------
-    //Remove a member
-    public void RemoveProduct(int productId)
-    {
-        try
+
+        //-----------------------------------------------------------------
+        //Add a new member
+        public void AddNew(Product Product)
         {
-            using FStoreContext fStoreContext = new FStoreContext();
-            var product = fStoreContext.Products.SingleOrDefault(m => m.ProductId == productId);
-            fStoreContext.Products.Remove(product);
-            fStoreContext.SaveChanges();
+            try
+            {
+                Product mem = GetProductByID(Product.ProductId);
+                if (mem == null)
+                {
+                    using var context = new FStore2Context();
+                    context.Products.Add(Product);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("The product is already exist.");
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
-        catch (Exception ex)
+        //-----------------------------------------------------------------
+        //Add a new member
+        public void Update(Product Product)
         {
-            throw new Exception(ex.Message);
+            try
+            {
+                Product mem = GetProductByID(Product.ProductId);
+                if (mem != null)
+                {
+                    using var context = new FStore2Context();
+                    context.Products.Update(Product);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("The product does not already exist.");
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        //-----------------------------------------------------------------
+        //Add a new member
+        public void Remove(int ProductId)
+        {
+            try
+            {
+                Product mem = GetProductByID(ProductId);
+                if (mem != null)
+                {
+                    using var context = new FStore2Context();
+                    context.Products.Remove(mem);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("The product does not already exist.");
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public List<Product> Filter(int a, int b)
+        {
+            var members = new List<Product>();
+            var fil = new List<Product>();
+            try
+            {
+                using var context = new FStore2Context();
+                members = context.Products.ToList();
+                for (int i = 0; i < members.Count(); i++)
+                {
+                    if ((members[i].UnitPrice >= a && members[i].UnitPrice <= b) || (members[i].UnitsInStock >= a && members[i].UnitsInStock <= b))
+                    {
+                        fil.Add(members[i]);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return fil;
         }
     }
 }

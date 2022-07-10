@@ -1,230 +1,233 @@
-﻿using BusinessObject;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessObject;
+using BusinessObject.Models;
 
-namespace DataAccess;
-
-public class OrderDetailDAO
+namespace DataAccess
 {
-    //Using Singleton Pattern
-    private static OrderDetailDAO instance = null;
-    private static readonly object instanceLock = new object();
-    private OrderDetailDAO() { }
-    public static OrderDetailDAO Instance
+    public class OrderDetailDAO
     {
-        get
+        //Using Singleton Pattern
+        private static OrderDetailDAO instance = null;
+        private static readonly object instanceLock = new object();
+        private OrderDetailDAO() { }
+        public static OrderDetailDAO Instance
         {
-            lock (instanceLock)
+            get
             {
-                if (instance == null)
+                lock (instanceLock)
                 {
-                    instance = new OrderDetailDAO();
-                }
-                return instance;
-            }
-        }
-    }
-    //Get List of Order Detail
-    public IEnumerable<OrderDetail> GetOrderDetailList()
-    {
-        List<OrderDetail> ordersDetailList;
-        try
-        {
-            using FStoreContext fStoreContext = new FStoreContext();
-            ordersDetailList = fStoreContext.OrderDetails.ToList();
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
-        return ordersDetailList;
-    }
-    //Get specific OrderDetail by OrderID and ProductID
-    public OrderDetail GetOrderDetailByID (int orderId, int productId)
-    {
-        OrderDetail item = null;
-        try
-        {
-            using var fStoreContext = new FStoreContext();
-            item = fStoreContext.OrderDetails.SingleOrDefault(o => o.ProductId == productId && o.OrderId == orderId);
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
-        return item;
-    }
-    //Get List of Order By MemberID
-    public IEnumerable<OrderDetail> GetOrderDetailListByMemberID(int memId)
-    {
-        var ordersList = new List<Order>();
-        var orderDetailList = new List<OrderDetail>();
-        var list = new List<Order>();
-        var final = new List<OrderDetail>();
-        try
-        {
-            using FStoreContext fStoreContext = new FStoreContext();
-            ordersList = fStoreContext.Orders.ToList();
-            orderDetailList = fStoreContext.OrderDetails.ToList();
-            for (int i = 0; i < ordersList.Count(); i++)
-            {
-                if (ordersList[i].MemberId == memId)
-                {
-                    list.Add(ordersList[i]);
-                }
-            }
-            for (int i = 0; i < list.Count(); i++)
-            {
-                for (int j = 0; i < orderDetailList.Count(); i++) 
-                {
-                    if (list[i].OrderId == orderDetailList[j].OrderId)
+                    if (instance == null)
                     {
-                        final.Add(orderDetailList[j]);
+                        instance = new OrderDetailDAO();
+                    }
+                    return instance;
+                }
+            }
+        }
+
+        public IEnumerable<OrderDetail> GetOrderDetailList()
+        {
+            var members = new List<OrderDetail>();
+            try
+            {
+                using var context = new FStore2Context();
+                members = context.OrderDetails.ToList();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return members;
+
+        }
+        public IEnumerable<OrderDetail> GetOrderDetailListByMemberID(int id)
+        {
+            var list = new List<OrderDetail>();
+            var members = new List<Order>();
+            var fil = new List<Order>();
+            var final = new List<OrderDetail>();
+            try
+            {
+                using var context = new FStore2Context();
+                members = context.Orders.ToList();
+                list = context.OrderDetails.ToList();
+                for (int i = 0; i < members.Count(); i++)
+                {
+                    if (members[i].MemberId == id)
+                    {
+                        fil.Add(members[i]);
                     }
                 }
-                
-            }
-
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
-        return final;
-    }
-
-    public IEnumerable<OrderDetail> GetOrderDetailListByOrderID (int orderId)
-    {
-        var list = new List<OrderDetail>();
-        var final = new List<OrderDetail>();
-        try
-        {
-            using FStoreContext fStoreContext = new FStoreContext();
-            list = fStoreContext.OrderDetails.ToList();
-            for (int i = 0; i < list.Count(); i++)
-            {
-                if (list[i].OrderId == orderId)
+                for (int i = 0; i < fil.Count(); i++)
                 {
-                    final.Add((OrderDetail)list[i]);
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
-        return final;
-    }
-
-    public IEnumerable<OrderDetail> GetOrderDetailListByListOrder (List<Order> id)
-    {
-        var list = new List<OrderDetail>();
-        var final = new List<OrderDetail>();
-        try
-        {
-            using var fStoreContext = new FStoreContext();
-            list = fStoreContext.OrderDetails.ToList();
-            for (int i = 0; i < id.Count(); i++)
-            {
-                for (int j = 0; j < list.Count(); j++)
-                {
-                    if (id[i].OrderId == list[j].OrderId)
+                    for (int z = 0; z < list.Count(); z++)
                     {
-                        final.Add(list[j]);
+                        if (fil[i].OrderId == list[z].OrderId)
+                        {
+                            final.Add(list[z]);
+                        }
                     }
                 }
             }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return final;
         }
-        catch (Exception ex)
+        public IEnumerable<OrderDetail> GetOrderDetailListByListOrder(IEnumerable<Order> id)
         {
-            throw new Exception(ex.Message);
+            var list = new List<OrderDetail>();
+            var fil = id.ToList();
+            var final = new List<OrderDetail>();
+            try
+            {
+                using var context = new FStore2Context();
+                list = context.OrderDetails.ToList();
+                for (int i = 0; i < fil.Count(); i++)
+                {
+                    for (int z = 0; z < list.Count(); z++)
+                    {
+                        if (fil[i].OrderId == list[z].OrderId)
+                        {
+                            final.Add(list[z]);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return final;
         }
-        return final;
-    }
 
+        public IEnumerable<OrderDetail> GetOrderDetailListByListOrder(List<Order> id)
+        {
+            var list = new List<OrderDetail>();
+            var final = new List<OrderDetail>();
+            try
+            {
+                using var context = new FStore2Context();
+                list = context.OrderDetails.ToList();
+                for (int i = 0; i < id.Count(); i++)
+                {
+                    for (int z = 0; z < list.Count(); z++)
+                    {
+                        if (id[i].OrderId == list[z].OrderId)
+                        {
+                            final.Add(list[z]);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return final;
+        }
 
-    public double GetStatistic (DateTime a, DateTime b)
-    {
-        double total = 0;        
-        var x = OrderDAO.Instance.Filter(a, b);
-        var list = GetOrderDetailListByListOrder(x).ToList();
-        try
-        {   
-            foreach(var item in list)
+        public double GetStatistic(IEnumerable<Order> id)
+        {
+            double total = 0.0;
+            var x = GetOrderDetailListByListOrder(id).ToList();
+            foreach (var z in x)
             {
-                total = item.Quantity * (double)item.UnitPrice - (item.Quantity * (double)item.UnitPrice * (item.Discount/100));              
+                total += z.Quantity * (double)z.UnitPrice - (z.Quantity * (double)z.UnitPrice * (z.Discount / 100));
             }
+            return total;
         }
-        catch(Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
-        return total;
-    }
-    //Add new OrderDetail
-    public void AddNew (OrderDetail orderDetail)
-    {
-        try
-        {
-            OrderDetail item = GetOrderDetailByID(orderDetail.OrderId, orderDetail.ProductId);
-            if (item == null)
-            {
-                using var fStoreContext = new FStoreContext();
-                fStoreContext.OrderDetails.Add(item);
-                fStoreContext.SaveChanges();
-            }
-            else
-            {
-                throw new Exception("This OrderDetail has already exists.");
-            }
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
-    }
-    //Update OrderDetail
-    public void Update(OrderDetail orderDetail)
-    {
-        try
-        {
-            OrderDetail item = GetOrderDetailByID(orderDetail.OrderId, orderDetail.ProductId);
-            if (item != null)
-            {
-                using var fStoreContext = new FStoreContext();
-                fStoreContext.OrderDetails.Update(item);
-                fStoreContext.SaveChanges();
-            }
-            else
-            {
-                throw new Exception("This OrderDetail does not exist.");
-            }
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
-    }
-    //Remove OrderDetail
-    public void Remove(int orderId, int productId)
-    {
-        try
-        {
-            OrderDetail item = GetOrderDetailByID(orderId, productId);
-            if (item != null)
-            {
-                using var fStoreContext = new FStoreContext();
-                fStoreContext.OrderDetails.Remove(item);
-                fStoreContext.SaveChanges();
-            }
-        }
-        catch(Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
-    }
 
+        public OrderDetail GetOrderDetailByID(int OrderID, int ProductID)
+        {
+            OrderDetail mem = null;
+            try
+            {
+                using var context = new FStore2Context();
+                mem = context.OrderDetails.SingleOrDefault(c => c.OrderId == OrderID && c.ProductId == ProductID);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return mem;
+        }
+
+        //-----------------------------------------------------------------
+        //Add a new member
+        public void AddNew(OrderDetail OrderDetail)
+        {
+            try
+            {
+                OrderDetail mem = GetOrderDetailByID(OrderDetail.OrderId, OrderDetail.ProductId);
+                if (mem == null)
+                {
+                    using var context = new FStore2Context();
+                    context.OrderDetails.Add(OrderDetail);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("The OrderDetail is already exist.");
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        //-----------------------------------------------------------------
+        //Add a new member
+        public void Update(OrderDetail OrderDetail)
+        {
+            try
+            {
+                OrderDetail mem = GetOrderDetailByID(OrderDetail.OrderId, OrderDetail.ProductId);
+                if (mem != null)
+                {
+                    using var context = new FStore2Context();
+                    context.OrderDetails.Update(OrderDetail);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("The OrderDetail does not already exist.");
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        //-----------------------------------------------------------------
+        //Add a new member
+        public void Remove(int OrderId, int ProductId)
+        {
+            try
+            {
+                OrderDetail mem = GetOrderDetailByID(OrderId, ProductId);
+                if (mem != null)
+                {
+                    using var context = new FStore2Context();
+                    context.OrderDetails.Remove(mem);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("The  OrderDetail does not already exist.");
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+    }
 }

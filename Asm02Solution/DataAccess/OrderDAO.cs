@@ -1,184 +1,180 @@
-﻿using BusinessObject;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+using BusinessObject;
+using BusinessObject.Models;
 
-namespace DataAccess;
-public class OrderDAO
+namespace DataAccess
 {
-    //Using Singleton Pattern
-    private static OrderDAO instance = null;
-    private static readonly object instanceLock = new object();
-    private OrderDAO() { }
-    public static OrderDAO Instance
+    public class OrderDAO
     {
-        get
+        //Using Singleton Pattern
+        private static OrderDAO instance = null;
+        private static readonly object instanceLock = new object();
+        private OrderDAO() { }
+        public static OrderDAO Instance
         {
-            lock (instanceLock)
+            get
             {
-                if (instance == null)
+                lock (instanceLock)
                 {
-                    instance = new OrderDAO();
-                }
-                return instance;
-            }
-        }
-    }
-    //Get List of Order
-    public IEnumerable<Order> GetOrderList()
-    {
-        List<Order> ordersList;
-        try
-        {
-            using FStoreContext fStoreContext = new FStoreContext();
-            ordersList = fStoreContext.Orders.ToList();
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
-        return ordersList;
-    }
-
-    //Get List of Order By MemberID
-    public IEnumerable<Order> GetOrderListByMemberID(int memId)
-    {
-        var ordersList = new List<Order>();
-        var list = new List<Order>();
-        try
-        {
-            using FStoreContext fStoreContext = new FStoreContext();
-            ordersList = fStoreContext.Orders.ToList();
-            for (int i = 0; i <ordersList.Count(); i++)
-            {
-                if (ordersList[i].MemberId == memId)
-                {
-                    list.Add(ordersList[i]);
+                    if (instance == null)
+                    {
+                        instance = new OrderDAO();
+                    }
+                    return instance;
                 }
             }
         }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
-        return list;
-    }
-    //----------------------------------------------------------------
-    //Get Order by ID
-    public Order GetOrderByID(int orderId)
-    {
-        Order order = null;
-        try
-        {
-            using FStoreContext fStoreContext = new FStoreContext();
-            order = fStoreContext.Orders.SingleOrDefault(o => o.OrderId == orderId);
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
-        return order;
-    }
-    //----------------------------------------------------------------
-    //Add a new Order
-    public void AddNewOrder(Order order)
-    {
-        try
-        {
-            Order item = GetOrderByID(order.OrderId);
-            if (item == null)
-            {
-                using FStoreContext fStoreContext = new FStoreContext();
-                fStoreContext.Orders.Add(order);
-                fStoreContext.SaveChanges();
-            }
-            else
-            {
-                throw new Exception("This order had already exist!");
-            }
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
-    }
-    //----------------------------------------------------------------
-    //Update a new Order
-    public void UpdateOrder(Order order)
-    {
-        try
-        {
-            Order item = GetOrderByID(order.OrderId);
-            if (item != null)
-            {
-                using FStoreContext fStoreContext = new FStoreContext();
-                fStoreContext.Orders.Update(order);
-                fStoreContext.SaveChanges();
-            }
-            else
-            {
-                throw new Exception("This order is not exist!");
-            }
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
-    }
-    //----------------------------------------------------------------
-    //Remove a member
-    public void RemoveOrder(int orderId)
-    {
-        try
-        {
-            Order item = GetOrderByID(orderId);
-            if (item != null)
-            {
-                using FStoreContext fStoreContext = new FStoreContext();
-                fStoreContext.Orders.Remove(item);
-                fStoreContext.SaveChanges();
-            }
-            else
-            {
-                throw new Exception("This order is not exist");
-            }
-        }
-        catch (Exception ex)
-        {
-            throw new Exception(ex.Message);
-        }
-    }
-    //----------------------------------------------------------------
-    //Filter
 
-    public List<Order> Filter(DateTime a, DateTime b)
-    {
-        var ordersList = new List<Order>();
-        var list = new List<Order>();
-        try
+        public IEnumerable<Order> GetOrderList()
         {
-            using FStoreContext fStoreContext = new FStoreContext();
-            ordersList = fStoreContext.Orders.ToList();
-            for (int i = 0; i < ordersList.Count(); i++)
+            var members = new List<Order>();
+            try
             {
-                if (ordersList[i].OrderDate >= a && ordersList[i].OrderDate <= b)
+                using var context = new FStore2Context();
+                members = context.Orders.ToList();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return members;
+
+        }
+        public IEnumerable<Order> GetOrderListByMemberID(int id)
+        {
+
+            var members = new List<Order>();
+            var fil = new List<Order>();
+            try
+            {
+                using var context = new FStore2Context();
+                members = context.Orders.ToList();
+                for (int i = 0; i < members.Count(); i++)
                 {
-                    list.Add(ordersList[i]);
+                    if (members[i].MemberId == id)
+                    {
+                        fil.Add(members[i]);
+                    }
                 }
             }
-            list = list.OrderByDescending(x => x.OrderDate).ToList();
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return fil;
         }
-        catch (Exception ex)
+
+        public Order GetOrderByID(int OrderID)
         {
-            throw new Exception(ex.Message);
+            Order mem = null;
+            try
+            {
+                using var context = new FStore2Context();
+                mem = context.Orders.SingleOrDefault(c => c.OrderId == OrderID);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return mem;
         }
-        return list;
+
+        //-----------------------------------------------------------------
+        //Add a new member
+        public void AddNew(Order Order)
+        {
+            try
+            {
+                Order mem = GetOrderByID(Order.OrderId);
+                if (mem == null)
+                {
+                    using var context = new FStore2Context();
+                    context.Orders.Add(Order);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("The Order is already exist.");
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        //-----------------------------------------------------------------
+        //Add a new member
+        public void Update(Order Order)
+        {
+            try
+            {
+                Order mem = GetOrderByID(Order.OrderId);
+                if (mem != null)
+                {
+                    using var context = new FStore2Context();
+                    context.Orders.Update(Order);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("The Order does not already exist.");
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        //-----------------------------------------------------------------
+        //Add a new member
+        public void Remove(int OrderId)
+        {
+            try
+            {
+                Order mem = GetOrderByID(OrderId);
+                if (mem != null)
+                {
+                    using var context = new FStore2Context();
+                    context.Orders.Remove(mem);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("The Order does not already exist.");
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public List<Order> Filter(DateTime a, DateTime b)
+        {
+            var members = new List<Order>();
+            var fil = new List<Order>();
+            try
+            {
+                using var context = new FStore2Context();
+                members = context.Orders.ToList();
+                for (int i = 0; i < members.Count(); i++)
+                {
+                    if ((members[i].OrderDate >= a && members[i].OrderDate <= b))
+                    {
+                        fil.Add(members[i]);
+                    }
+                }
+                fil = fil.OrderByDescending(x => x.OrderDate).ToList();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return fil;
+        }
     }
-
-
-
-
 }

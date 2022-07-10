@@ -1,4 +1,4 @@
-﻿using SalesWinApp;
+﻿using MyStoreWinApp;
 using System.Windows.Forms;
 
 namespace SalesWinApp
@@ -12,23 +12,18 @@ namespace SalesWinApp
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void memberToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-
-        }
-
-        private void memberToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (!CheckExistForm("frmMemberManagements"))
-            {
-                frmMemberManagements frm = new frmMemberManagements() { isAdmin = this.isAdmin, id = this.id };
+           if (!CheckExistForm("frmMemberManagements"))
+           {
+                frmMemberManagements frm = new frmMemberManagements() { isAdmin = this.isAdmin, id = this.id};
                 frm.MdiParent = this;
                 frm.Show();
-            }
-            else ActiveChildForm("frmMemberManagements");
+           }
+           else ActiveChildForm("frmMemberManagements");
         }
 
-        private void productToolStripMenuItem_Click(object sender, EventArgs e)
+        private void productToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             if (!CheckExistForm("frmProductManagements"))
             {
@@ -39,7 +34,7 @@ namespace SalesWinApp
             else ActiveChildForm("frmProductManagements");
         }
 
-        private void orderToolStripMenuItem_Click(object sender, EventArgs e)
+        private void orderToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             if (!CheckExistForm("frmOrderManagements"))
             {
@@ -48,6 +43,7 @@ namespace SalesWinApp
                 frm.Show();
             }
             else ActiveChildForm("frmOrderManagements");
+
         }
 
         private bool CheckExistForm(string name)
@@ -65,7 +61,7 @@ namespace SalesWinApp
         }
         private void ActiveChildForm (string name)
         {
-            foreach (Form frm in this.MdiChildren)
+            foreach(Form frm in this.MdiChildren)
             {
                 if (frm.Name == name)
                 {
@@ -73,6 +69,11 @@ namespace SalesWinApp
                     break;
                 }
             }
+        }
+
+        private void frmMain_Load(object sender, System.EventArgs e)
+        {
+
         }
     }
 }
