@@ -107,6 +107,7 @@ namespace SalesWinApp
                 //The BindingSource component is designed to simplify
                 //the process of binding controls to an underlying data source
                 source = new BindingSource();
+                
                 source.DataSource = members.OrderByDescending(member => member.ProductName);
                 txtProductID.DataBindings.Clear();
                 txtProductName.DataBindings.Clear();
@@ -271,7 +272,7 @@ namespace SalesWinApp
                 {
                     //The BindingSource omponent is designed to simplify
                     //the process of binding controls to an underlying data source
-                        if (i.ProductName.Contains(txtSearch.Text))
+                        if (i.ProductName.ToLower().Contains(txtSearch.Text.ToLower()))
                         {
                             mem.Add(i);
                         }
@@ -355,6 +356,26 @@ namespace SalesWinApp
         private void btnFind_Click(object sender, EventArgs e)
         {
             FilterMember();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFind_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtProductName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

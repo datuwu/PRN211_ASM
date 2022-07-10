@@ -42,7 +42,7 @@ namespace MyStoreWinApp
             // 
             this.lbLogin.AutoSize = true;
             this.lbLogin.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbLogin.Location = new System.Drawing.Point(186, 9);
+            this.lbLogin.Location = new System.Drawing.Point(120, 16);
             this.lbLogin.Name = "lbLogin";
             this.lbLogin.Size = new System.Drawing.Size(70, 30);
             this.lbLogin.TabIndex = 0;
@@ -51,7 +51,7 @@ namespace MyStoreWinApp
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
-            this.lbUsername.Location = new System.Drawing.Point(12, 70);
+            this.lbUsername.Location = new System.Drawing.Point(16, 72);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(60, 15);
             this.lbUsername.TabIndex = 1;
@@ -60,7 +60,7 @@ namespace MyStoreWinApp
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Location = new System.Drawing.Point(12, 117);
+            this.lbPassword.Location = new System.Drawing.Point(16, 112);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(57, 15);
             this.lbPassword.TabIndex = 2;
@@ -68,7 +68,7 @@ namespace MyStoreWinApp
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(109, 68);
+            this.txtUserName.Location = new System.Drawing.Point(80, 64);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(238, 23);
@@ -76,7 +76,7 @@ namespace MyStoreWinApp
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(109, 117);
+            this.txtPassword.Location = new System.Drawing.Point(80, 104);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -85,7 +85,7 @@ namespace MyStoreWinApp
             // 
             // btnLog
             // 
-            this.btnLog.Location = new System.Drawing.Point(109, 178);
+            this.btnLog.Location = new System.Drawing.Point(80, 136);
             this.btnLog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(82, 22);
@@ -96,7 +96,7 @@ namespace MyStoreWinApp
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(264, 178);
+            this.btnCancel.Location = new System.Drawing.Point(232, 136);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(82, 22);
@@ -109,7 +109,7 @@ namespace MyStoreWinApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 216);
+            this.ClientSize = new System.Drawing.Size(330, 168);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLog);
             this.Controls.Add(this.txtPassword);
@@ -119,7 +119,7 @@ namespace MyStoreWinApp
             this.Controls.Add(this.lbLogin);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLogin";
-            this.Text = "Ass02Solution_SE1505_NguyenTuanKhai";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

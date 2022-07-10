@@ -58,57 +58,58 @@ namespace SalesWinApp
             // 
             // txtUnitsInStock
             // 
-            this.txtUnitsInStock.Location = new System.Drawing.Point(499, 115);
+            this.txtUnitsInStock.Location = new System.Drawing.Point(408, 72);
             this.txtUnitsInStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUnitsInStock.Name = "txtUnitsInStock";
-            this.txtUnitsInStock.Size = new System.Drawing.Size(219, 23);
+            this.txtUnitsInStock.Size = new System.Drawing.Size(216, 23);
             this.txtUnitsInStock.TabIndex = 63;
             // 
             // txtUnitPrice
             // 
-            this.txtUnitPrice.Location = new System.Drawing.Point(499, 81);
+            this.txtUnitPrice.Location = new System.Drawing.Point(408, 40);
             this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUnitPrice.Name = "txtUnitPrice";
-            this.txtUnitPrice.Size = new System.Drawing.Size(219, 23);
+            this.txtUnitPrice.Size = new System.Drawing.Size(216, 23);
             this.txtUnitPrice.TabIndex = 62;
             // 
             // txtCategoryID
             // 
-            this.txtCategoryID.Location = new System.Drawing.Point(198, 115);
+            this.txtCategoryID.Location = new System.Drawing.Point(96, 72);
             this.txtCategoryID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCategoryID.Name = "txtCategoryID";
             this.txtCategoryID.ReadOnly = true;
-            this.txtCategoryID.Size = new System.Drawing.Size(192, 23);
+            this.txtCategoryID.Size = new System.Drawing.Size(216, 23);
             this.txtCategoryID.TabIndex = 57;
             // 
             // txtProductName
             // 
-            this.txtProductName.Location = new System.Drawing.Point(198, 81);
+            this.txtProductName.Location = new System.Drawing.Point(96, 40);
             this.txtProductName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(192, 23);
+            this.txtProductName.Size = new System.Drawing.Size(216, 23);
             this.txtProductName.TabIndex = 56;
+            this.txtProductName.TextChanged += new System.EventHandler(this.txtProductName_TextChanged);
             // 
             // txtProductID
             // 
-            this.txtProductID.Location = new System.Drawing.Point(198, 41);
+            this.txtProductID.Location = new System.Drawing.Point(96, 8);
             this.txtProductID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProductID.Name = "txtProductID";
-            this.txtProductID.Size = new System.Drawing.Size(192, 23);
+            this.txtProductID.Size = new System.Drawing.Size(216, 23);
             this.txtProductID.TabIndex = 55;
             // 
             // txtWeight
             // 
-            this.txtWeight.Location = new System.Drawing.Point(499, 41);
+            this.txtWeight.Location = new System.Drawing.Point(408, 8);
             this.txtWeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(219, 23);
+            this.txtWeight.Size = new System.Drawing.Size(216, 23);
             this.txtWeight.TabIndex = 54;
             // 
             // lbWeight
             // 
             this.lbWeight.AutoSize = true;
-            this.lbWeight.Location = new System.Drawing.Point(412, 44);
+            this.lbWeight.Location = new System.Drawing.Point(320, 16);
             this.lbWeight.Name = "lbWeight";
             this.lbWeight.Size = new System.Drawing.Size(45, 15);
             this.lbWeight.TabIndex = 53;
@@ -117,7 +118,7 @@ namespace SalesWinApp
             // lbUnitsInStock
             // 
             this.lbUnitsInStock.AutoSize = true;
-            this.lbUnitsInStock.Location = new System.Drawing.Point(412, 118);
+            this.lbUnitsInStock.Location = new System.Drawing.Point(320, 80);
             this.lbUnitsInStock.Name = "lbUnitsInStock";
             this.lbUnitsInStock.Size = new System.Drawing.Size(79, 15);
             this.lbUnitsInStock.TabIndex = 52;
@@ -126,7 +127,7 @@ namespace SalesWinApp
             // lbUnitPrice
             // 
             this.lbUnitPrice.AutoSize = true;
-            this.lbUnitPrice.Location = new System.Drawing.Point(412, 83);
+            this.lbUnitPrice.Location = new System.Drawing.Point(320, 48);
             this.lbUnitPrice.Name = "lbUnitPrice";
             this.lbUnitPrice.Size = new System.Drawing.Size(58, 15);
             this.lbUnitPrice.TabIndex = 51;
@@ -135,7 +136,7 @@ namespace SalesWinApp
             // lbProductName
             // 
             this.lbProductName.AutoSize = true;
-            this.lbProductName.Location = new System.Drawing.Point(101, 81);
+            this.lbProductName.Location = new System.Drawing.Point(8, 48);
             this.lbProductName.Name = "lbProductName";
             this.lbProductName.Size = new System.Drawing.Size(84, 15);
             this.lbProductName.TabIndex = 50;
@@ -144,7 +145,7 @@ namespace SalesWinApp
             // lbCategoryID
             // 
             this.lbCategoryID.AutoSize = true;
-            this.lbCategoryID.Location = new System.Drawing.Point(101, 115);
+            this.lbCategoryID.Location = new System.Drawing.Point(8, 80);
             this.lbCategoryID.Name = "lbCategoryID";
             this.lbCategoryID.Size = new System.Drawing.Size(69, 15);
             this.lbCategoryID.TabIndex = 49;
@@ -153,7 +154,7 @@ namespace SalesWinApp
             // lbProductID
             // 
             this.lbProductID.AutoSize = true;
-            this.lbProductID.Location = new System.Drawing.Point(101, 44);
+            this.lbProductID.Location = new System.Drawing.Point(8, 16);
             this.lbProductID.Name = "lbProductID";
             this.lbProductID.Size = new System.Drawing.Size(63, 15);
             this.lbProductID.TabIndex = 48;
@@ -162,15 +163,15 @@ namespace SalesWinApp
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 195);
+            this.label1.Location = new System.Drawing.Point(264, 128);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 15);
+            this.label1.Size = new System.Drawing.Size(0, 15);
             this.label1.TabIndex = 74;
-            this.label1.Text = "ID and/or Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(587, 221);
+            this.btnFind.Location = new System.Drawing.Point(544, 152);
             this.btnFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(82, 22);
@@ -181,7 +182,7 @@ namespace SalesWinApp
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(389, 193);
+            this.btnSearch.Location = new System.Drawing.Point(544, 120);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(82, 22);
@@ -192,18 +193,18 @@ namespace SalesWinApp
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(198, 192);
+            this.txtSearch.Location = new System.Drawing.Point(368, 120);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderText = "Seach member";
-            this.txtSearch.Size = new System.Drawing.Size(185, 23);
+            this.txtSearch.PlaceholderText = "ID and/or Name";
+            this.txtSearch.Size = new System.Drawing.Size(168, 23);
             this.txtSearch.TabIndex = 69;
-            this.txtSearch.Text = "ID and/or Name";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgvMemberList
             // 
             this.dgvMemberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMemberList.Location = new System.Drawing.Point(12, 254);
+            this.dgvMemberList.Location = new System.Drawing.Point(8, 184);
             this.dgvMemberList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvMemberList.MultiSelect = false;
             this.dgvMemberList.Name = "dgvMemberList";
@@ -211,13 +212,13 @@ namespace SalesWinApp
             this.dgvMemberList.RowHeadersWidth = 51;
             this.dgvMemberList.RowTemplate.Height = 29;
             this.dgvMemberList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMemberList.Size = new System.Drawing.Size(776, 126);
+            this.dgvMemberList.Size = new System.Drawing.Size(616, 256);
             this.dgvMemberList.TabIndex = 68;
             this.dgvMemberList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMemberList_CellDoubleClick);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(368, 384);
+            this.btnClose.Location = new System.Drawing.Point(280, 448);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(82, 22);
@@ -228,7 +229,7 @@ namespace SalesWinApp
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(151, 164);
+            this.btnLoad.Location = new System.Drawing.Point(8, 120);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(82, 22);
@@ -239,7 +240,7 @@ namespace SalesWinApp
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(368, 164);
+            this.btnNew.Location = new System.Drawing.Point(96, 120);
             this.btnNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(82, 22);
@@ -250,7 +251,7 @@ namespace SalesWinApp
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(587, 164);
+            this.btnDelete.Location = new System.Drawing.Point(184, 120);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(82, 22);
@@ -262,7 +263,7 @@ namespace SalesWinApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 223);
+            this.label2.Location = new System.Drawing.Point(8, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 15);
             this.label2.TabIndex = 76;
@@ -270,29 +271,28 @@ namespace SalesWinApp
             // 
             // txtFind
             // 
-            this.txtFind.Location = new System.Drawing.Point(198, 220);
+            this.txtFind.Location = new System.Drawing.Point(192, 152);
             this.txtFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFind.Name = "txtFind";
-            this.txtFind.PlaceholderText = "Seach member";
-            this.txtFind.Size = new System.Drawing.Size(185, 23);
+            this.txtFind.PlaceholderText = "Numbers From";
+            this.txtFind.Size = new System.Drawing.Size(168, 23);
             this.txtFind.TabIndex = 75;
-            this.txtFind.Text = "Numbers From";
+            this.txtFind.TextChanged += new System.EventHandler(this.txtFind_TextChanged);
             // 
             // txtToNum
             // 
-            this.txtToNum.Location = new System.Drawing.Point(389, 220);
+            this.txtToNum.Location = new System.Drawing.Point(368, 152);
             this.txtToNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtToNum.Name = "txtToNum";
-            this.txtToNum.PlaceholderText = "Seach member";
-            this.txtToNum.Size = new System.Drawing.Size(185, 23);
+            this.txtToNum.PlaceholderText = "Numbers To";
+            this.txtToNum.Size = new System.Drawing.Size(168, 23);
             this.txtToNum.TabIndex = 77;
-            this.txtToNum.Text = "Numbers To";
             // 
             // frmProductManagements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 417);
+            this.ClientSize = new System.Drawing.Size(634, 491);
             this.Controls.Add(this.txtToNum);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtFind);
@@ -318,7 +318,9 @@ namespace SalesWinApp
             this.Controls.Add(this.lbCategoryID);
             this.Controls.Add(this.lbProductID);
             this.Name = "frmProductManagements";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Management";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmProductManagements_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).EndInit();
             this.ResumeLayout(false);

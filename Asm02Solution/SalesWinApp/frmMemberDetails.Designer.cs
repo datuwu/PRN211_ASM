@@ -48,7 +48,7 @@ namespace MyStoreWinApp
             // lbMemberID
             // 
             this.lbMemberID.AutoSize = true;
-            this.lbMemberID.Location = new System.Drawing.Point(10, 9);
+            this.lbMemberID.Location = new System.Drawing.Point(16, 16);
             this.lbMemberID.Name = "lbMemberID";
             this.lbMemberID.Size = new System.Drawing.Size(66, 15);
             this.lbMemberID.TabIndex = 0;
@@ -57,7 +57,7 @@ namespace MyStoreWinApp
             // lbMemberName
             // 
             this.lbMemberName.AutoSize = true;
-            this.lbMemberName.Location = new System.Drawing.Point(10, 48);
+            this.lbMemberName.Location = new System.Drawing.Point(16, 48);
             this.lbMemberName.Name = "lbMemberName";
             this.lbMemberName.Size = new System.Drawing.Size(87, 15);
             this.lbMemberName.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace MyStoreWinApp
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(10, 96);
+            this.lbEmail.Location = new System.Drawing.Point(16, 80);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(36, 15);
             this.lbEmail.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace MyStoreWinApp
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Location = new System.Drawing.Point(10, 138);
+            this.lbPassword.Location = new System.Drawing.Point(16, 112);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(57, 15);
             this.lbPassword.TabIndex = 3;
@@ -84,7 +84,7 @@ namespace MyStoreWinApp
             // lbCity
             // 
             this.lbCity.AutoSize = true;
-            this.lbCity.Location = new System.Drawing.Point(10, 229);
+            this.lbCity.Location = new System.Drawing.Point(16, 176);
             this.lbCity.Name = "lbCity";
             this.lbCity.Size = new System.Drawing.Size(28, 15);
             this.lbCity.TabIndex = 4;
@@ -93,7 +93,7 @@ namespace MyStoreWinApp
             // lbCountry
             // 
             this.lbCountry.AutoSize = true;
-            this.lbCountry.Location = new System.Drawing.Point(10, 181);
+            this.lbCountry.Location = new System.Drawing.Point(16, 144);
             this.lbCountry.Name = "lbCountry";
             this.lbCountry.Size = new System.Drawing.Size(50, 15);
             this.lbCountry.TabIndex = 5;
@@ -101,7 +101,7 @@ namespace MyStoreWinApp
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(154, 138);
+            this.txtPassword.Location = new System.Drawing.Point(112, 104);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -110,7 +110,7 @@ namespace MyStoreWinApp
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(154, 94);
+            this.txtEmail.Location = new System.Drawing.Point(112, 72);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(254, 23);
@@ -118,7 +118,7 @@ namespace MyStoreWinApp
             // 
             // txtMemberName
             // 
-            this.txtMemberName.Location = new System.Drawing.Point(154, 48);
+            this.txtMemberName.Location = new System.Drawing.Point(112, 40);
             this.txtMemberName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMemberName.Name = "txtMemberName";
             this.txtMemberName.Size = new System.Drawing.Size(254, 23);
@@ -126,7 +126,7 @@ namespace MyStoreWinApp
             // 
             // txtMemberID
             // 
-            this.txtMemberID.Location = new System.Drawing.Point(154, 9);
+            this.txtMemberID.Location = new System.Drawing.Point(112, 8);
             this.txtMemberID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMemberID.Name = "txtMemberID";
             this.txtMemberID.Size = new System.Drawing.Size(254, 23);
@@ -141,7 +141,7 @@ namespace MyStoreWinApp
             "Ha Noi",
             "Phu Quoc",
             "Vung Tau"});
-            this.cboCity.Location = new System.Drawing.Point(154, 229);
+            this.cboCity.Location = new System.Drawing.Point(112, 168);
             this.cboCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboCity.Name = "cboCity";
             this.cboCity.Size = new System.Drawing.Size(254, 23);
@@ -150,7 +150,7 @@ namespace MyStoreWinApp
             // btnSave
             // 
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnSave.Location = new System.Drawing.Point(154, 276);
+            this.btnSave.Location = new System.Drawing.Point(112, 200);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(82, 22);
@@ -162,7 +162,7 @@ namespace MyStoreWinApp
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(326, 276);
+            this.btnCancel.Location = new System.Drawing.Point(280, 200);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(82, 22);
@@ -179,7 +179,7 @@ namespace MyStoreWinApp
             "America",
             "United State",
             "United Kingdom"});
-            this.cboCountry.Location = new System.Drawing.Point(154, 179);
+            this.cboCountry.Location = new System.Drawing.Point(112, 136);
             this.cboCountry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboCountry.Name = "cboCountry";
             this.cboCountry.Size = new System.Drawing.Size(254, 23);
@@ -189,7 +189,7 @@ namespace MyStoreWinApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 338);
+            this.ClientSize = new System.Drawing.Size(376, 232);
             this.Controls.Add(this.cboCountry);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -206,7 +206,8 @@ namespace MyStoreWinApp
             this.Controls.Add(this.lbMemberID);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMemberDetails";
-            this.Text = "Ass02Solution_SE1505_NguyenTuanKhai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Member Details";
             this.Load += new System.EventHandler(this.frmMemberDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

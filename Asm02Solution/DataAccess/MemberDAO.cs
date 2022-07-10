@@ -121,11 +121,16 @@ namespace DataAccess
         {
             List<Member> FList = new List<Member>();
             List<Member> MemberList = GetMemberList();
-            for (int i = 1; i <= MemberList.Count; i++)
-            {
-                if (MemberList[i - 1].City == city && MemberList[i - 1].Country == country) { FList.Add(MemberList[i - 1]); }
-            }
-            return FList;
+
+            city = (city.ToLower() != "all city" && city.ToLower() != "city") ? city : null;
+            country = (country.ToLower() != "all country" && country.ToLower() != "country") ? country : null;
+
+            if (country != null)
+                MemberList = MemberList.Where(m => m.Country.ToLower().Contains(country.ToLower())).ToList();
+            if (city != null)
+                MemberList = MemberList.Where(m => m.City.ToLower().Contains(city.ToLower())).ToList();
+
+            return MemberList;
         }
     }
 }

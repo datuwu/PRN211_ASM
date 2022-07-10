@@ -64,7 +64,7 @@ namespace SalesWinApp
             // dgvMemberList
             // 
             this.dgvMemberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMemberList.Location = new System.Drawing.Point(13, 272);
+            this.dgvMemberList.Location = new System.Drawing.Point(8, 200);
             this.dgvMemberList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvMemberList.MultiSelect = false;
             this.dgvMemberList.Name = "dgvMemberList";
@@ -72,15 +72,15 @@ namespace SalesWinApp
             this.dgvMemberList.RowHeadersWidth = 51;
             this.dgvMemberList.RowTemplate.Height = 29;
             this.dgvMemberList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMemberList.Size = new System.Drawing.Size(736, 126);
+            this.dgvMemberList.Size = new System.Drawing.Size(616, 126);
             this.dgvMemberList.TabIndex = 38;
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(81, 127);
+            this.btnLoad.Location = new System.Drawing.Point(80, 104);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(124, 22);
+            this.btnLoad.Size = new System.Drawing.Size(128, 22);
             this.btnLoad.TabIndex = 37;
             this.btnLoad.Text = "&Load Details";
             this.btnLoad.UseVisualStyleBackColor = true;
@@ -88,7 +88,7 @@ namespace SalesWinApp
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(340, 127);
+            this.btnNew.Location = new System.Drawing.Point(264, 104);
             this.btnNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(82, 22);
@@ -99,7 +99,7 @@ namespace SalesWinApp
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(559, 127);
+            this.btnDelete.Location = new System.Drawing.Point(408, 104);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(82, 22);
@@ -110,40 +110,40 @@ namespace SalesWinApp
             // 
             // txtOrderDate
             // 
-            this.txtOrderDate.Location = new System.Drawing.Point(178, 85);
+            this.txtOrderDate.Location = new System.Drawing.Point(80, 72);
             this.txtOrderDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOrderDate.Name = "txtOrderDate";
-            this.txtOrderDate.Size = new System.Drawing.Size(192, 23);
+            this.txtOrderDate.Size = new System.Drawing.Size(216, 23);
             this.txtOrderDate.TabIndex = 33;
             // 
             // txtMemberID
             // 
-            this.txtMemberID.Location = new System.Drawing.Point(178, 51);
+            this.txtMemberID.Location = new System.Drawing.Point(80, 40);
             this.txtMemberID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMemberID.Name = "txtMemberID";
-            this.txtMemberID.Size = new System.Drawing.Size(192, 23);
+            this.txtMemberID.Size = new System.Drawing.Size(216, 23);
             this.txtMemberID.TabIndex = 32;
             // 
             // txtOrderID
             // 
-            this.txtOrderID.Location = new System.Drawing.Point(178, 11);
+            this.txtOrderID.Location = new System.Drawing.Point(80, 8);
             this.txtOrderID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOrderID.Name = "txtOrderID";
-            this.txtOrderID.Size = new System.Drawing.Size(192, 23);
+            this.txtOrderID.Size = new System.Drawing.Size(216, 23);
             this.txtOrderID.TabIndex = 31;
             // 
             // txtRequiredDate
             // 
-            this.txtRequiredDate.Location = new System.Drawing.Point(479, 11);
+            this.txtRequiredDate.Location = new System.Drawing.Point(408, 8);
             this.txtRequiredDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRequiredDate.Name = "txtRequiredDate";
-            this.txtRequiredDate.Size = new System.Drawing.Size(219, 23);
+            this.txtRequiredDate.Size = new System.Drawing.Size(208, 23);
             this.txtRequiredDate.TabIndex = 30;
             // 
             // lbRequiredDate
             // 
             this.lbRequiredDate.AutoSize = true;
-            this.lbRequiredDate.Location = new System.Drawing.Point(392, 14);
+            this.lbRequiredDate.Location = new System.Drawing.Point(320, 16);
             this.lbRequiredDate.Name = "lbRequiredDate";
             this.lbRequiredDate.Size = new System.Drawing.Size(81, 15);
             this.lbRequiredDate.TabIndex = 29;
@@ -152,7 +152,7 @@ namespace SalesWinApp
             // lbFreight
             // 
             this.lbFreight.AutoSize = true;
-            this.lbFreight.Location = new System.Drawing.Point(392, 88);
+            this.lbFreight.Location = new System.Drawing.Point(320, 80);
             this.lbFreight.Name = "lbFreight";
             this.lbFreight.Size = new System.Drawing.Size(44, 15);
             this.lbFreight.TabIndex = 28;
@@ -161,7 +161,7 @@ namespace SalesWinApp
             // lbCountry
             // 
             this.lbCountry.AutoSize = true;
-            this.lbCountry.Location = new System.Drawing.Point(392, 53);
+            this.lbCountry.Location = new System.Drawing.Point(320, 48);
             this.lbCountry.Name = "lbCountry";
             this.lbCountry.Size = new System.Drawing.Size(77, 15);
             this.lbCountry.TabIndex = 27;
@@ -170,7 +170,7 @@ namespace SalesWinApp
             // lbMemberID
             // 
             this.lbMemberID.AutoSize = true;
-            this.lbMemberID.Location = new System.Drawing.Point(81, 51);
+            this.lbMemberID.Location = new System.Drawing.Point(8, 48);
             this.lbMemberID.Name = "lbMemberID";
             this.lbMemberID.Size = new System.Drawing.Size(66, 15);
             this.lbMemberID.TabIndex = 26;
@@ -179,7 +179,7 @@ namespace SalesWinApp
             // lbOrderDate
             // 
             this.lbOrderDate.AutoSize = true;
-            this.lbOrderDate.Location = new System.Drawing.Point(81, 85);
+            this.lbOrderDate.Location = new System.Drawing.Point(8, 80);
             this.lbOrderDate.Name = "lbOrderDate";
             this.lbOrderDate.Size = new System.Drawing.Size(64, 15);
             this.lbOrderDate.TabIndex = 25;
@@ -188,7 +188,7 @@ namespace SalesWinApp
             // lbOrderID
             // 
             this.lbOrderID.AutoSize = true;
-            this.lbOrderID.Location = new System.Drawing.Point(81, 14);
+            this.lbOrderID.Location = new System.Drawing.Point(8, 16);
             this.lbOrderID.Name = "lbOrderID";
             this.lbOrderID.Size = new System.Drawing.Size(51, 15);
             this.lbOrderID.TabIndex = 24;
@@ -196,24 +196,24 @@ namespace SalesWinApp
             // 
             // txtShippedDate
             // 
-            this.txtShippedDate.Location = new System.Drawing.Point(479, 51);
+            this.txtShippedDate.Location = new System.Drawing.Point(408, 40);
             this.txtShippedDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtShippedDate.Name = "txtShippedDate";
-            this.txtShippedDate.Size = new System.Drawing.Size(219, 23);
+            this.txtShippedDate.Size = new System.Drawing.Size(216, 23);
             this.txtShippedDate.TabIndex = 46;
             // 
             // txtFreight
             // 
-            this.txtFreight.Location = new System.Drawing.Point(479, 85);
+            this.txtFreight.Location = new System.Drawing.Point(408, 72);
             this.txtFreight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFreight.Name = "txtFreight";
-            this.txtFreight.Size = new System.Drawing.Size(219, 23);
+            this.txtFreight.Size = new System.Drawing.Size(216, 23);
             this.txtFreight.TabIndex = 47;
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(559, 417);
+            this.btnCancel.Location = new System.Drawing.Point(408, 352);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(82, 22);
@@ -225,10 +225,10 @@ namespace SalesWinApp
             // btnSave
             // 
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnSave.Location = new System.Drawing.Point(340, 417);
+            this.btnSave.Location = new System.Drawing.Point(264, 352);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(82, 22);
+            this.btnSave.Size = new System.Drawing.Size(80, 22);
             this.btnSave.TabIndex = 48;
             this.btnSave.Text = "&Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -236,10 +236,10 @@ namespace SalesWinApp
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(81, 417);
+            this.button1.Location = new System.Drawing.Point(80, 352);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 22);
+            this.button1.Size = new System.Drawing.Size(128, 22);
             this.button1.TabIndex = 73;
             this.button1.Text = "&Load Members";
             this.button1.UseVisualStyleBackColor = true;
@@ -248,7 +248,7 @@ namespace SalesWinApp
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 465);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 384);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -256,12 +256,12 @@ namespace SalesWinApp
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(736, 151);
+            this.dataGridView1.Size = new System.Drawing.Size(616, 151);
             this.dataGridView1.TabIndex = 72;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(479, 215);
+            this.textBox1.Location = new System.Drawing.Point(408, 168);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(219, 23);
@@ -269,7 +269,7 @@ namespace SalesWinApp
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(479, 181);
+            this.textBox2.Location = new System.Drawing.Point(408, 136);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(219, 23);
@@ -277,24 +277,24 @@ namespace SalesWinApp
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(178, 215);
+            this.textBox3.Location = new System.Drawing.Point(80, 168);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(192, 23);
+            this.textBox3.Size = new System.Drawing.Size(216, 23);
             this.textBox3.TabIndex = 79;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(178, 181);
+            this.textBox4.Location = new System.Drawing.Point(80, 136);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(192, 23);
+            this.textBox4.Size = new System.Drawing.Size(216, 23);
             this.textBox4.TabIndex = 78;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(392, 218);
+            this.label1.Location = new System.Drawing.Point(320, 176);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 15);
             this.label1.TabIndex = 77;
@@ -303,7 +303,7 @@ namespace SalesWinApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(392, 183);
+            this.label2.Location = new System.Drawing.Point(320, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 15);
             this.label2.TabIndex = 76;
@@ -312,7 +312,7 @@ namespace SalesWinApp
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 181);
+            this.label3.Location = new System.Drawing.Point(8, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 15);
             this.label3.TabIndex = 75;
@@ -321,7 +321,7 @@ namespace SalesWinApp
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(81, 215);
+            this.label4.Location = new System.Drawing.Point(8, 176);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 15);
             this.label4.TabIndex = 74;
@@ -331,7 +331,7 @@ namespace SalesWinApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 627);
+            this.ClientSize = new System.Drawing.Size(633, 544);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox3);
@@ -361,7 +361,8 @@ namespace SalesWinApp
             this.Controls.Add(this.lbOrderDate);
             this.Controls.Add(this.lbOrderID);
             this.Name = "frmOrderDetails";
-            this.Text = "Ass02Solution_SE1505_NguyenTuanKhai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Order Details";
             this.Load += new System.EventHandler(this.frmOrderDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

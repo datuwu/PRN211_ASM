@@ -135,7 +135,6 @@ namespace MyStoreWinApp
                 cboCountry.DataBindings.Add("Text", source, "Country");
                 cboCity.DataBindings.Add("Text", source, "City");
 
-
                 dgvMemberList.DataSource = null;
                 dgvMemberList.DataSource = source;
                 if (isAdmin == false)
