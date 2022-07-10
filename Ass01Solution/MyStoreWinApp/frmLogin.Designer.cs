@@ -39,43 +39,46 @@
             // ibEmail
             // 
             this.ibEmail.AutoSize = true;
-            this.ibEmail.Location = new System.Drawing.Point(127, 67);
+            this.ibEmail.Location = new System.Drawing.Point(24, 32);
             this.ibEmail.Name = "ibEmail";
-            this.ibEmail.Size = new System.Drawing.Size(46, 20);
+            this.ibEmail.Size = new System.Drawing.Size(36, 15);
             this.ibEmail.TabIndex = 0;
             this.ibEmail.Text = "Email";
             // 
             // ibPassword
             // 
             this.ibPassword.AutoSize = true;
-            this.ibPassword.Location = new System.Drawing.Point(118, 151);
+            this.ibPassword.Location = new System.Drawing.Point(24, 64);
             this.ibPassword.Name = "ibPassword";
-            this.ibPassword.Size = new System.Drawing.Size(70, 20);
+            this.ibPassword.Size = new System.Drawing.Size(57, 15);
             this.ibPassword.TabIndex = 1;
             this.ibPassword.Text = "Password";
             this.ibPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(233, 64);
+            this.txtEmail.Location = new System.Drawing.Point(88, 24);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(181, 27);
+            this.txtEmail.Size = new System.Drawing.Size(160, 23);
             this.txtEmail.TabIndex = 2;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(233, 151);
+            this.txtPassword.Location = new System.Drawing.Point(88, 56);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '1';
-            this.txtPassword.Size = new System.Drawing.Size(181, 27);
+            this.txtPassword.Size = new System.Drawing.Size(160, 23);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLog
             // 
-            this.btnLog.Location = new System.Drawing.Point(118, 257);
+            this.btnLog.Location = new System.Drawing.Point(88, 88);
+            this.btnLog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLog.Name = "btnLog";
-            this.btnLog.Size = new System.Drawing.Size(94, 29);
+            this.btnLog.Size = new System.Drawing.Size(72, 22);
             this.btnLog.TabIndex = 4;
             this.btnLog.Text = "&Login";
             this.btnLog.UseVisualStyleBackColor = true;
@@ -83,9 +86,10 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(320, 257);
+            this.btnClose.Location = new System.Drawing.Point(176, 88);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(94, 29);
+            this.btnClose.Size = new System.Drawing.Size(74, 22);
             this.btnClose.TabIndex = 5;
             this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -93,17 +97,18 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 450);
+            this.ClientSize = new System.Drawing.Size(274, 125);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLog);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.ibPassword);
             this.Controls.Add(this.ibEmail);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLogin";
-            this.Text = "frmLogin";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -47,84 +47,88 @@
             // lbMemberID
             // 
             this.lbMemberID.AutoSize = true;
-            this.lbMemberID.Location = new System.Drawing.Point(35, 9);
+            this.lbMemberID.Location = new System.Drawing.Point(31, 7);
             this.lbMemberID.Name = "lbMemberID";
-            this.lbMemberID.Size = new System.Drawing.Size(84, 20);
+            this.lbMemberID.Size = new System.Drawing.Size(66, 15);
             this.lbMemberID.TabIndex = 17;
             this.lbMemberID.Text = "Member ID";
             // 
             // lbMemberName
             // 
             this.lbMemberName.AutoSize = true;
-            this.lbMemberName.Location = new System.Drawing.Point(35, 55);
+            this.lbMemberName.Location = new System.Drawing.Point(31, 41);
             this.lbMemberName.Name = "lbMemberName";
-            this.lbMemberName.Size = new System.Drawing.Size(109, 20);
+            this.lbMemberName.Size = new System.Drawing.Size(87, 15);
             this.lbMemberName.TabIndex = 18;
             this.lbMemberName.Text = "Member Name";
             // 
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(35, 101);
+            this.lbEmail.Location = new System.Drawing.Point(31, 76);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(46, 20);
+            this.lbEmail.Size = new System.Drawing.Size(36, 15);
             this.lbEmail.TabIndex = 19;
             this.lbEmail.Text = "Email";
             // 
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Location = new System.Drawing.Point(35, 152);
+            this.lbPassword.Location = new System.Drawing.Point(31, 114);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(70, 20);
+            this.lbPassword.Size = new System.Drawing.Size(57, 15);
             this.lbPassword.TabIndex = 20;
             this.lbPassword.Text = "Password";
             // 
             // lbCountry
             // 
             this.lbCountry.AutoSize = true;
-            this.lbCountry.Location = new System.Drawing.Point(35, 205);
+            this.lbCountry.Location = new System.Drawing.Point(31, 154);
             this.lbCountry.Name = "lbCountry";
-            this.lbCountry.Size = new System.Drawing.Size(60, 20);
+            this.lbCountry.Size = new System.Drawing.Size(50, 15);
             this.lbCountry.TabIndex = 22;
             this.lbCountry.Text = "Country";
             // 
             // lbCity
             // 
             this.lbCity.AutoSize = true;
-            this.lbCity.Location = new System.Drawing.Point(35, 255);
+            this.lbCity.Location = new System.Drawing.Point(31, 191);
             this.lbCity.Name = "lbCity";
-            this.lbCity.Size = new System.Drawing.Size(34, 20);
+            this.lbCity.Size = new System.Drawing.Size(28, 15);
             this.lbCity.TabIndex = 23;
             this.lbCity.Text = "City";
             // 
             // txtMemberID
             // 
-            this.txtMemberID.Location = new System.Drawing.Point(177, 6);
+            this.txtMemberID.Location = new System.Drawing.Point(155, 4);
+            this.txtMemberID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMemberID.Name = "txtMemberID";
-            this.txtMemberID.Size = new System.Drawing.Size(290, 27);
+            this.txtMemberID.Size = new System.Drawing.Size(254, 23);
             this.txtMemberID.TabIndex = 26;
             // 
             // txtMemberName
             // 
-            this.txtMemberName.Location = new System.Drawing.Point(177, 52);
+            this.txtMemberName.Location = new System.Drawing.Point(155, 39);
+            this.txtMemberName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMemberName.Name = "txtMemberName";
-            this.txtMemberName.Size = new System.Drawing.Size(290, 27);
+            this.txtMemberName.Size = new System.Drawing.Size(254, 23);
             this.txtMemberName.TabIndex = 27;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(177, 98);
+            this.txtEmail.Location = new System.Drawing.Point(155, 74);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(290, 27);
+            this.txtEmail.Size = new System.Drawing.Size(254, 23);
             this.txtEmail.TabIndex = 28;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(177, 152);
+            this.txtPassword.Location = new System.Drawing.Point(155, 114);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(290, 27);
+            this.txtPassword.Size = new System.Drawing.Size(254, 23);
             this.txtPassword.TabIndex = 29;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -137,9 +141,10 @@
             "America",
             "United State",
             "United Kingdom"});
-            this.cboCountry.Location = new System.Drawing.Point(177, 202);
+            this.cboCountry.Location = new System.Drawing.Point(155, 152);
+            this.cboCountry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboCountry.Name = "cboCountry";
-            this.cboCountry.Size = new System.Drawing.Size(290, 28);
+            this.cboCountry.Size = new System.Drawing.Size(254, 23);
             this.cboCountry.TabIndex = 30;
             // 
             // cboCity
@@ -152,17 +157,19 @@
             "Ha Noi",
             "Phu Quoc",
             "Vung Tau"});
-            this.cboCity.Location = new System.Drawing.Point(177, 255);
+            this.cboCity.Location = new System.Drawing.Point(155, 191);
+            this.cboCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboCity.Name = "cboCity";
-            this.cboCity.Size = new System.Drawing.Size(290, 28);
+            this.cboCity.Size = new System.Drawing.Size(254, 23);
             this.cboCity.TabIndex = 31;
             // 
             // btnSave
             // 
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnSave.Location = new System.Drawing.Point(177, 307);
+            this.btnSave.Location = new System.Drawing.Point(155, 230);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 29);
+            this.btnSave.Size = new System.Drawing.Size(82, 22);
             this.btnSave.TabIndex = 32;
             this.btnSave.Text = "&Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -171,9 +178,10 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(373, 307);
+            this.btnCancel.Location = new System.Drawing.Point(326, 230);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(94, 29);
+            this.btnCancel.Size = new System.Drawing.Size(82, 22);
             this.btnCancel.TabIndex = 33;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -181,9 +189,9 @@
             // 
             // frmMemberDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 450);
+            this.ClientSize = new System.Drawing.Size(461, 338);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cboCity);
@@ -198,8 +206,9 @@
             this.Controls.Add(this.lbEmail);
             this.Controls.Add(this.lbMemberName);
             this.Controls.Add(this.lbMemberID);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMemberDetails";
-            this.Text = "frmMemberDetails";
+            this.Text = "Member Details";
             this.Load += new System.EventHandler(this.frmMemberDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
