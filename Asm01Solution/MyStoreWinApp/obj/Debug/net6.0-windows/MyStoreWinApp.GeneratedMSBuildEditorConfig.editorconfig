@@ -1,0 +1,20 @@
+is_global = true
+build_property.ApplicationManifest = 
+build_property.StartupObject = 
+build_property.ApplicationDefaultFont = 
+build_property.ApplicationHighDpiMode = 
+build_property.ApplicationUseCompatibleTextRendering = 
+build_property.ApplicationVisualStyles = 
+build_property.TargetFramework = net6.0-windows
+build_property.TargetPlatformMinVersion = 7.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MyStoreWinApp
+<<<<<<< HEAD:Asm01Solution/MyStoreWinApp/obj/Debug/net6.0-windows/MyStoreWinApp.GeneratedMSBuildEditorConfig.editorconfig
+build_property.ProjectDir = D:\Desktop\my-material\Ki 5\PRN211\Workspace\PRN211_ASM\Asm01Solution\MyStoreWinApp\
+=======
+build_property.ProjectDir = D:\Desktop\my-material\Ki 5\PRN211\Workspace\PRN211_ASM\Ass01Solution\MyStoreWinApp\
+>>>>>>> asm1_repo:Ass01Solution/MyStoreWinApp/obj/Debug/net6.0-windows/MyStoreWinApp.GeneratedMSBuildEditorConfig.editorconfig
