@@ -288,7 +288,7 @@ namespace MyStoreWinApp
             {
                 foreach (var i in members)
                 {
-                    if (i.CompanyName.Contains(txtSearch.Text))
+                    if (i.CompanyName.ToUpper().Contains(txtSearch.Text.ToUpper()))
                     {
                         mem.Add(i);
                     }

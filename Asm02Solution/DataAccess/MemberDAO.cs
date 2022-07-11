@@ -69,7 +69,7 @@ namespace DataAccess
 
 
             //using LINQ to Object
-            Member member = MemberList.SingleOrDefault(pro => pro.CompanyName == memberName);
+            Member member = MemberList.SingleOrDefault(pro => pro.CompanyName.ToUpper() == memberName.ToUpper());
             return member;
         }
         //-----------------------------------------------------------------
