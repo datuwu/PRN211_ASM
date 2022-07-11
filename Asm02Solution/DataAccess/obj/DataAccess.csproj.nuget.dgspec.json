@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm02Solution\\DataAccess\\DataAccess.csproj": {}
+    "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm02Solution\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm02Solution\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm02Solution\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\doixu\\.nuget\\packages\\",
-        "outputPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm02Solution\\BusinessObject\\obj\\",
+        "projectPath": "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Software\\VS\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\doixu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -77,25 +76,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm02Solution\\DataAccess\\DataAccess.csproj": {
+    "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm02Solution\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm02Solution\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\doixu\\.nuget\\packages\\",
-        "outputPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm02Solution\\DataAccess\\obj\\",
+        "projectPath": "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Software\\VS\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\doixu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -110,8 +108,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm02Solution\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\Desktop\\my-material\\Ki 5\\PRN211\\Workspace\\PRN211_ASM\\Asm02Solution\\BusinessObject\\BusinessObject.csproj"
+              "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\FPT\\STUDYING\\Ky5_SUMMER2022\\PRN211\\Assignment\\PRN211_ASM\\Asm02Solution\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -140,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

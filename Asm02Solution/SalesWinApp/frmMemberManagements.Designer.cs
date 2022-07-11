@@ -51,6 +51,7 @@ namespace MyStoreWinApp
             this.btnSearch = new System.Windows.Forms.Button();
             this.cboCountry = new System.Windows.Forms.ComboBox();
             this.btnFind = new System.Windows.Forms.Button();
+            this.lbSearch = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,12 +63,16 @@ namespace MyStoreWinApp
             "United State",
             "Viet Nam",
             "America",
+            "United Kingdom",
+            "United State",
+            "Viet Nam",
+            "America",
             "United Kingdom"});
-            this.cboSearchCountry.Location = new System.Drawing.Point(320, 120);
+            this.cboSearchCountry.Location = new System.Drawing.Point(368, 148);
             this.cboSearchCountry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboSearchCountry.Name = "cboSearchCountry";
-            this.cboSearchCountry.Size = new System.Drawing.Size(114, 23);
-            this.cboSearchCountry.TabIndex = 19;
+            this.cboSearchCountry.Size = new System.Drawing.Size(103, 23);
+            this.cboSearchCountry.TabIndex = 49;
             this.cboSearchCountry.Text = "Country";
             // 
             // cboSearchCity
@@ -79,23 +84,36 @@ namespace MyStoreWinApp
             "Da Nang",
             "Ha Noi",
             "Phu Quoc",
+            "Vung Tau",
+            "Ho Chi Minh",
+            "Da Nang",
+            "Ha Noi",
+            "Phu Quoc",
             "Vung Tau"});
-            this.cboSearchCity.Location = new System.Drawing.Point(440, 120);
+            this.cboSearchCity.Location = new System.Drawing.Point(487, 148);
             this.cboSearchCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboSearchCity.Name = "cboSearchCity";
-            this.cboSearchCity.Size = new System.Drawing.Size(98, 23);
-            this.cboSearchCity.TabIndex = 21;
+            this.cboSearchCity.Size = new System.Drawing.Size(104, 23);
+            this.cboSearchCity.TabIndex = 50;
             this.cboSearchCity.Text = "City";
             // 
             // lbMemberID
             // 
             this.lbMemberID.AutoSize = true;
-<<<<<<< HEAD:Ass01Solution/MyStoreWinApp/frmMemberManagement.Designer.cs
             this.lbMemberID.Location = new System.Drawing.Point(22, 7);
             this.lbMemberID.Name = "lbMemberID";
             this.lbMemberID.Size = new System.Drawing.Size(18, 15);
             this.lbMemberID.TabIndex = 25;
             this.lbMemberID.Text = "ID";
+            // 
+            // lbPassword
+            // 
+            this.lbPassword.AutoSize = true;
+            this.lbPassword.Location = new System.Drawing.Point(22, 82);
+            this.lbPassword.Name = "lbPassword";
+            this.lbPassword.Size = new System.Drawing.Size(57, 15);
+            this.lbPassword.TabIndex = 28;
+            this.lbPassword.Text = "Password";
             // 
             // lbMemberName
             // 
@@ -105,33 +123,44 @@ namespace MyStoreWinApp
             this.lbMemberName.Size = new System.Drawing.Size(39, 15);
             this.lbMemberName.TabIndex = 27;
             this.lbMemberName.Text = "Name";
-=======
-            this.lbMemberID.Location = new System.Drawing.Point(8, 16);
-            this.lbMemberID.Name = "lbMemberID";
-            this.lbMemberID.Size = new System.Drawing.Size(66, 15);
-            this.lbMemberID.TabIndex = 0;
-            this.lbMemberID.Text = "Member ID";
->>>>>>> main:Asm02Solution/SalesWinApp/frmMemberManagements.Designer.cs
             // 
-            // lbPassword
+            // lbCountry
             // 
-            this.lbPassword.AutoSize = true;
-<<<<<<< HEAD:Ass01Solution/MyStoreWinApp/frmMemberManagement.Designer.cs
-            this.lbPassword.Location = new System.Drawing.Point(22, 82);
-            this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(57, 15);
-            this.lbPassword.TabIndex = 28;
-=======
-            this.lbPassword.Location = new System.Drawing.Point(8, 80);
-            this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(57, 15);
-            this.lbPassword.TabIndex = 1;
->>>>>>> main:Asm02Solution/SalesWinApp/frmMemberManagements.Designer.cs
-            this.lbPassword.Text = "Password";
+            this.lbCountry.AutoSize = true;
+            this.lbCountry.Location = new System.Drawing.Point(333, 43);
+            this.lbCountry.Name = "lbCountry";
+            this.lbCountry.Size = new System.Drawing.Size(50, 15);
+            this.lbCountry.TabIndex = 36;
+            this.lbCountry.Text = "Country";
             // 
-            // lbMemberName
+            // lbCity
             // 
-<<<<<<< HEAD:Ass01Solution/MyStoreWinApp/frmMemberManagement.Designer.cs
+            this.lbCity.AutoSize = true;
+            this.lbCity.Location = new System.Drawing.Point(333, 85);
+            this.lbCity.Name = "lbCity";
+            this.lbCity.Size = new System.Drawing.Size(28, 15);
+            this.lbCity.TabIndex = 37;
+            this.lbCity.Text = "City";
+            // 
+            // lbEmail
+            // 
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.Location = new System.Drawing.Point(333, 9);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(36, 15);
+            this.lbEmail.TabIndex = 5;
+            this.lbEmail.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(399, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(219, 23);
+            this.txtEmail.TabIndex = 38;
+            // 
+            // txtMemberID
+            // 
             this.txtMemberID.Location = new System.Drawing.Point(88, 4);
             this.txtMemberID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMemberID.Name = "txtMemberID";
@@ -156,214 +185,6 @@ namespace MyStoreWinApp
             this.txtPassword.Size = new System.Drawing.Size(192, 23);
             this.txtPassword.TabIndex = 34;
             // 
-            // lbEmail
-            // 
-            this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(333, 10);
-            this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(36, 15);
-            this.lbEmail.TabIndex = 35;
-            this.lbEmail.Text = "Email";
-=======
-            this.lbMemberName.AutoSize = true;
-            this.lbMemberName.Location = new System.Drawing.Point(8, 48);
-            this.lbMemberName.Name = "lbMemberName";
-            this.lbMemberName.Size = new System.Drawing.Size(87, 15);
-            this.lbMemberName.TabIndex = 2;
-            this.lbMemberName.Text = "Member Name";
->>>>>>> main:Asm02Solution/SalesWinApp/frmMemberManagements.Designer.cs
-            // 
-            // lbCountry
-            // 
-            this.lbCountry.AutoSize = true;
-<<<<<<< HEAD:Ass01Solution/MyStoreWinApp/frmMemberManagement.Designer.cs
-            this.lbCountry.Location = new System.Drawing.Point(333, 46);
-            this.lbCountry.Name = "lbCountry";
-            this.lbCountry.Size = new System.Drawing.Size(50, 15);
-            this.lbCountry.TabIndex = 36;
-=======
-            this.lbCountry.Location = new System.Drawing.Point(352, 48);
-            this.lbCountry.Name = "lbCountry";
-            this.lbCountry.Size = new System.Drawing.Size(50, 15);
-            this.lbCountry.TabIndex = 3;
->>>>>>> main:Asm02Solution/SalesWinApp/frmMemberManagements.Designer.cs
-            this.lbCountry.Text = "Country";
-            // 
-            // lbCity
-            // 
-            this.lbCity.AutoSize = true;
-<<<<<<< HEAD:Ass01Solution/MyStoreWinApp/frmMemberManagement.Designer.cs
-            this.lbCity.Location = new System.Drawing.Point(333, 85);
-            this.lbCity.Name = "lbCity";
-            this.lbCity.Size = new System.Drawing.Size(28, 15);
-            this.lbCity.TabIndex = 37;
-=======
-            this.lbCity.Location = new System.Drawing.Point(352, 80);
-            this.lbCity.Name = "lbCity";
-            this.lbCity.Size = new System.Drawing.Size(28, 15);
-            this.lbCity.TabIndex = 4;
->>>>>>> main:Asm02Solution/SalesWinApp/frmMemberManagements.Designer.cs
-            this.lbCity.Text = "City";
-            // 
-            // lbEmail
-            // 
-            this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(352, 16);
-            this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(36, 15);
-            this.lbEmail.TabIndex = 5;
-            this.lbEmail.Text = "Email";
-            // 
-            // txtEmail
-            // 
-<<<<<<< HEAD:Ass01Solution/MyStoreWinApp/frmMemberManagement.Designer.cs
-            this.txtEmail.Location = new System.Drawing.Point(392, 4);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(219, 23);
-            this.txtEmail.TabIndex = 38;
-=======
-            this.txtEmail.Location = new System.Drawing.Point(408, 8);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(216, 23);
-            this.txtEmail.TabIndex = 7;
-            // 
-            // txtMemberID
-            // 
-            this.txtMemberID.Location = new System.Drawing.Point(104, 8);
-            this.txtMemberID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMemberID.Name = "txtMemberID";
-            this.txtMemberID.Size = new System.Drawing.Size(216, 23);
-            this.txtMemberID.TabIndex = 8;
-            // 
-            // txtMemberName
-            // 
-            this.txtMemberName.Location = new System.Drawing.Point(104, 40);
-            this.txtMemberName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMemberName.Name = "txtMemberName";
-            this.txtMemberName.Size = new System.Drawing.Size(216, 23);
-            this.txtMemberName.TabIndex = 9;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(104, 72);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.ReadOnly = true;
-            this.txtPassword.Size = new System.Drawing.Size(216, 23);
-            this.txtPassword.TabIndex = 10;
-            // 
-            // cboCity
-            // 
-            this.cboCity.FormattingEnabled = true;
-            this.cboCity.Items.AddRange(new object[] {
-            "Ho Chi Minh",
-            "Da Nang",
-            "Ha Noi",
-            "Phu Quoc",
-            "Vung Tau"});
-            this.cboCity.Location = new System.Drawing.Point(408, 72);
-            this.cboCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboCity.Name = "cboCity";
-            this.cboCity.Size = new System.Drawing.Size(216, 23);
-            this.cboCity.TabIndex = 11;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(184, 120);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(82, 22);
-            this.btnDelete.TabIndex = 12;
-            this.btnDelete.Text = "&Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnNew
-            // 
-            this.btnNew.Location = new System.Drawing.Point(96, 120);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(82, 22);
-            this.btnNew.TabIndex = 13;
-            this.btnNew.Text = "&New";
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Location = new System.Drawing.Point(8, 120);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(82, 22);
-            this.btnLoad.TabIndex = 14;
-            this.btnLoad.Text = "&Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(272, 464);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(82, 22);
-            this.btnClose.TabIndex = 15;
-            this.btnClose.Text = "&Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // dgvMemberList
-            // 
-            this.dgvMemberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMemberList.Location = new System.Drawing.Point(10, 185);
-            this.dgvMemberList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvMemberList.MultiSelect = false;
-            this.dgvMemberList.Name = "dgvMemberList";
-            this.dgvMemberList.ReadOnly = true;
-            this.dgvMemberList.RowHeadersWidth = 51;
-            this.dgvMemberList.RowTemplate.Height = 29;
-            this.dgvMemberList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMemberList.Size = new System.Drawing.Size(614, 270);
-            this.dgvMemberList.TabIndex = 16;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(160, 152);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderText = "Seach member";
-            this.txtSearch.Size = new System.Drawing.Size(376, 23);
-            this.txtSearch.TabIndex = 17;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(544, 152);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(82, 22);
-            this.btnSearch.TabIndex = 18;
-            this.btnSearch.Text = "&Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
->>>>>>> main:Asm02Solution/SalesWinApp/frmMemberManagements.Designer.cs
-            // 
-            // cboCountry
-            // 
-            this.cboCountry.FormattingEnabled = true;
-            this.cboCountry.Items.AddRange(new object[] {
-            "Viet Nam",
-            "America",
-            "United State",
-            "United Kingdom"});
-<<<<<<< HEAD:Ass01Solution/MyStoreWinApp/frmMemberManagement.Designer.cs
-            this.cboCountry.Location = new System.Drawing.Point(392, 37);
-            this.cboCountry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboCountry.Name = "cboCountry";
-            this.cboCountry.Size = new System.Drawing.Size(219, 23);
-            this.cboCountry.TabIndex = 44;
-            // 
             // cboCity
             // 
             this.cboCity.FormattingEnabled = true;
@@ -373,33 +194,11 @@ namespace MyStoreWinApp
             "Ha Noi",
             "Phu Quoc",
             "Vung Tau"});
-            this.cboCity.Location = new System.Drawing.Point(392, 82);
+            this.cboCity.Location = new System.Drawing.Point(399, 82);
             this.cboCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboCity.Name = "cboCity";
             this.cboCity.Size = new System.Drawing.Size(219, 23);
             this.cboCity.TabIndex = 45;
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Location = new System.Drawing.Point(22, 147);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(82, 22);
-            this.btnLoad.TabIndex = 46;
-            this.btnLoad.Text = "&Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-            // 
-            // btnNew
-            // 
-            this.btnNew.Location = new System.Drawing.Point(144, 147);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(82, 22);
-            this.btnNew.TabIndex = 47;
-            this.btnNew.Text = "&New";
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnDelete
             // 
@@ -412,92 +211,38 @@ namespace MyStoreWinApp
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // cboSearchCountry
+            // btnNew
             // 
-            this.cboSearchCountry.FormattingEnabled = true;
-            this.cboSearchCountry.Items.AddRange(new object[] {
-            "United State",
-            "Viet Nam",
-            "America",
-            "United Kingdom"});
-            this.cboSearchCountry.Location = new System.Drawing.Point(368, 148);
-            this.cboSearchCountry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboSearchCountry.Name = "cboSearchCountry";
-            this.cboSearchCountry.Size = new System.Drawing.Size(103, 23);
-            this.cboSearchCountry.TabIndex = 49;
-            this.cboSearchCountry.Text = "Country";
+            this.btnNew.Location = new System.Drawing.Point(144, 147);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(82, 22);
+            this.btnNew.TabIndex = 47;
+            this.btnNew.Text = "&New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // cboSearchCity
+            // btnLoad
             // 
-            this.cboSearchCity.FormattingEnabled = true;
-            this.cboSearchCity.Items.AddRange(new object[] {
-            "Ho Chi Minh",
-            "Da Nang",
-            "Ha Noi",
-            "Phu Quoc",
-            "Vung Tau"});
-            this.cboSearchCity.Location = new System.Drawing.Point(487, 148);
-            this.cboSearchCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboSearchCity.Name = "cboSearchCity";
-            this.cboSearchCity.Size = new System.Drawing.Size(104, 23);
-            this.cboSearchCity.TabIndex = 50;
-            this.cboSearchCity.Text = "City";
+            this.btnLoad.Location = new System.Drawing.Point(22, 147);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(82, 22);
+            this.btnLoad.TabIndex = 46;
+            this.btnLoad.Text = "&Load";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // btnFind
+            // btnClose
             // 
-            this.btnFind.Location = new System.Drawing.Point(607, 148);
-            this.btnFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(82, 22);
-            this.btnFind.TabIndex = 51;
-=======
-            this.cboCountry.Location = new System.Drawing.Point(408, 40);
-            this.cboCountry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboCountry.Name = "cboCountry";
-            this.cboCountry.Size = new System.Drawing.Size(216, 23);
-            this.cboCountry.TabIndex = 20;
-            // 
-            // btnFind
-            // 
-            this.btnFind.Location = new System.Drawing.Point(544, 120);
-            this.btnFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(82, 22);
-            this.btnFind.TabIndex = 22;
->>>>>>> main:Asm02Solution/SalesWinApp/frmMemberManagements.Designer.cs
-            this.btnFind.Text = "&Find";
-            this.btnFind.UseVisualStyleBackColor = true;
-            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
-            // 
-            // frmMemberManagements
-            // 
-<<<<<<< HEAD:Ass01Solution/MyStoreWinApp/frmMemberManagement.Designer.cs
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 183);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 15);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "ID and/or Name";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(144, 178);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderText = "Seach member";
-            this.txtSearch.Size = new System.Drawing.Size(447, 23);
-            this.txtSearch.TabIndex = 53;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(607, 177);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(82, 22);
-            this.btnSearch.TabIndex = 54;
-            this.btnSearch.Text = "&Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnClose.Location = new System.Drawing.Point(333, 340);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(82, 22);
+            this.btnClose.TabIndex = 56;
+            this.btnClose.Text = "&Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // dgvMemberList
             // 
@@ -512,32 +257,66 @@ namespace MyStoreWinApp
             this.dgvMemberList.Size = new System.Drawing.Size(668, 126);
             this.dgvMemberList.TabIndex = 55;
             // 
-            // btnClose
+            // txtSearch
             // 
-            this.btnClose.Location = new System.Drawing.Point(333, 340);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(82, 22);
-            this.btnClose.TabIndex = 56;
-            this.btnClose.Text = "&Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.txtSearch.Location = new System.Drawing.Point(144, 177);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "Search Member";
+            this.txtSearch.Size = new System.Drawing.Size(447, 23);
+            this.txtSearch.TabIndex = 53;
             // 
-            // frmMemberManagement
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(607, 177);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(82, 22);
+            this.btnSearch.TabIndex = 54;
+            this.btnSearch.Text = "&Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // cboCountry
+            // 
+            this.cboCountry.FormattingEnabled = true;
+            this.cboCountry.Items.AddRange(new object[] {
+            "Viet Nam",
+            "America",
+            "United State",
+            "United Kingdom"});
+            this.cboCountry.Location = new System.Drawing.Point(399, 40);
+            this.cboCountry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboCountry.Name = "cboCountry";
+            this.cboCountry.Size = new System.Drawing.Size(219, 23);
+            this.cboCountry.TabIndex = 44;
+            // 
+            // btnFind
+            // 
+            this.btnFind.Location = new System.Drawing.Point(607, 148);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(82, 22);
+            this.btnFind.TabIndex = 51;
+            this.btnFind.Text = "&Find";
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
+            // lbSearch
+            // 
+            this.lbSearch.AutoSize = true;
+            this.lbSearch.Location = new System.Drawing.Point(22, 180);
+            this.lbSearch.Name = "lbSearch";
+            this.lbSearch.Size = new System.Drawing.Size(86, 15);
+            this.lbSearch.TabIndex = 57;
+            this.lbSearch.Text = "Input ID/Name";
+            // 
+            // frmMemberManagements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 370);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.dgvMemberList);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.label1);
-=======
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 491);
->>>>>>> main:Asm02Solution/SalesWinApp/frmMemberManagements.Designer.cs
+            this.Controls.Add(this.lbSearch);
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.cboSearchCity);
             this.Controls.Add(this.cboCountry);
@@ -561,17 +340,9 @@ namespace MyStoreWinApp
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.lbMemberID);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-<<<<<<< HEAD:Ass01Solution/MyStoreWinApp/frmMemberManagement.Designer.cs
-            this.Name = "frmMemberManagement";
-            this.Text = "Member Management";
-            this.Load += new System.EventHandler(this.frmMemberManagement_Load);
-=======
             this.Name = "frmMemberManagements";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Member Management";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMemberManagements_Load);
->>>>>>> main:Asm02Solution/SalesWinApp/frmMemberManagements.Designer.cs
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -602,6 +373,7 @@ namespace MyStoreWinApp
         private System.Windows.Forms.ComboBox cboCountry;
         private System.Windows.Forms.ComboBox cboSearchCity;
         private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.Label lbSearch;
     }
 }
 
